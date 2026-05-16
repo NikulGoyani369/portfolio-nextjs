@@ -1,0 +1,95 @@
+<h2>How should the page be structured?</h2>
+<p class="subtitle">Pick the section layout that feels right for your portfolio</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="single-page-scroll" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d0d14;padding:16px;font-family:sans-serif;border-bottom:1px solid #1e1e2e;">
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:10px;">
+        <div style="background:#1e1e2e;color:#a78bfa;padding:6px 10px;border-radius:3px;letter-spacing:1px;">▬ NAVBAR (fixed, glass blur)</div>
+        <div style="background:#12121f;border:1px solid #a78bfa30;color:#e2e8f0;padding:10px;border-radius:3px;text-align:center;">
+          <div style="color:#a78bfa;font-size:9px;letter-spacing:1px;">HERO</div>
+          <div style="color:#fff;font-size:12px;font-weight:700;margin:4px 0;">Hi, I'm Nikul</div>
+          <div style="color:#6b7280;font-size:9px;">Front-End Developer · React · Next.js</div>
+          <div style="margin-top:6px;display:inline-block;background:#a78bfa;color:#0d0d14;padding:3px 10px;border-radius:3px;font-size:9px;">View Work ↓</div>
+        </div>
+        <div style="background:#12121f;border-left:2px solid #34d399;color:#e2e8f0;padding:8px 10px;border-radius:3px;">
+          <div style="color:#34d399;font-size:9px;letter-spacing:1px;">ABOUT</div>
+          <div style="color:#6b7280;font-size:9px;margin-top:2px;">Short bio + photo side-by-side</div>
+        </div>
+        <div style="background:#12121f;border-left:2px solid #60a5fa;color:#e2e8f0;padding:8px 10px;border-radius:3px;">
+          <div style="color:#60a5fa;font-size:9px;letter-spacing:1px;">SKILLS</div>
+          <div style="color:#6b7280;font-size:9px;margin-top:2px;">Tech icons grid</div>
+        </div>
+        <div style="background:#12121f;border-left:2px solid #f472b6;color:#e2e8f0;padding:8px 10px;border-radius:3px;">
+          <div style="color:#f472b6;font-size:9px;letter-spacing:1px;">PROJECTS</div>
+          <div style="color:#6b7280;font-size:9px;margin-top:2px;">Cards with preview images + links</div>
+        </div>
+        <div style="background:#12121f;border-left:2px solid #fbbf24;color:#e2e8f0;padding:8px 10px;border-radius:3px;">
+          <div style="color:#fbbf24;font-size:9px;letter-spacing:1px;">CONTACT</div>
+          <div style="color:#6b7280;font-size:9px;margin-top:2px;">Email form + social links</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Single Page Scroll</h3>
+      <p>All sections on one page. Smooth anchor-link navigation. Most common for developer portfolios. Fast, simple, no routing needed.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="hero-plus-pages" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d0d14;padding:16px;font-family:sans-serif;border-bottom:1px solid #1e1e2e;">
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:10px;">
+        <div style="background:#1e1e2e;color:#a78bfa;padding:6px 10px;border-radius:3px;letter-spacing:1px;">▬ NAVBAR (About · Projects · Contact)</div>
+        <div style="background:#12121f;border:1px solid #a78bfa30;color:#e2e8f0;padding:14px;border-radius:3px;text-align:center;">
+          <div style="color:#a78bfa;font-size:9px;letter-spacing:1px;">HERO — Full Viewport</div>
+          <div style="color:#fff;font-size:13px;font-weight:700;margin:4px 0;">Hi, I'm Nikul.</div>
+          <div style="color:#6b7280;font-size:9px;">I craft modern web experiences</div>
+          <div style="margin-top:8px;display:flex;gap:8px;justify-content:center;">
+            <div style="background:#a78bfa;color:#0d0d14;padding:3px 10px;border-radius:3px;font-size:9px;">Projects</div>
+            <div style="border:1px solid #a78bfa;color:#a78bfa;padding:3px 10px;border-radius:3px;font-size:9px;">Resume</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;">
+          <div style="flex:1;background:#1a1a2e;border:1px dashed #374151;color:#6b7280;padding:8px;border-radius:3px;text-align:center;font-size:9px;">
+            <div style="color:#a78bfa;margin-bottom:2px;">/about</div>
+            Separate page
+          </div>
+          <div style="flex:1;background:#1a1a2e;border:1px dashed #374151;color:#6b7280;padding:8px;border-radius:3px;text-align:center;font-size:9px;">
+            <div style="color:#f472b6;margin-bottom:2px;">/projects</div>
+            Separate page
+          </div>
+          <div style="flex:1;background:#1a1a2e;border:1px dashed #374151;color:#6b7280;padding:8px;border-radius:3px;text-align:center;font-size:9px;">
+            <div style="color:#fbbf24;margin-bottom:2px;">/contact</div>
+            Separate page
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Hero + Separate Pages</h3>
+      <p>Bold fullscreen hero on homepage. Each section gets its own route (/about, /projects, /contact). More work, but showcases Next.js routing skills.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="bento-grid" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d0d14;padding:16px;font-family:sans-serif;border-bottom:1px solid #1e1e2e;">
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:10px;">
+        <div style="background:#1e1e2e;color:#a78bfa;padding:6px 10px;border-radius:3px;letter-spacing:1px;">▬ NAVBAR</div>
+        <div style="background:#12121f;border:1px solid #a78bfa30;color:#fff;padding:10px;border-radius:3px;text-align:center;font-size:12px;font-weight:700;">HERO — Hi, I'm Nikul</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+          <div style="background:#1a1a2e;border:1px solid #a78bfa40;color:#a78bfa;padding:8px;border-radius:3px;font-size:9px;grid-column:span 2;text-align:center;">ABOUT — Full width bio card</div>
+          <div style="background:#1a1a2e;border:1px solid #34d39940;color:#34d399;padding:8px;border-radius:3px;font-size:9px;">SKILLS<br/><span style="color:#6b7280">React icon grid</span></div>
+          <div style="background:#1a1a2e;border:1px solid #f472b640;color:#f472b6;padding:8px;border-radius:3px;font-size:9px;">PROJECT<br/><span style="color:#6b7280">Featured card</span></div>
+          <div style="background:#1a1a2e;border:1px solid #f472b640;color:#f472b6;padding:8px;border-radius:3px;font-size:9px;grid-column:span 2;text-align:center;">MORE PROJECTS — 3 col grid</div>
+          <div style="background:#1a1a2e;border:1px solid #fbbf2440;color:#fbbf24;padding:8px;border-radius:3px;font-size:9px;grid-column:span 2;text-align:center;">CONTACT</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Single Page + Bento Grid</h3>
+      <p>Single page scroll but with a modern bento-box grid layout mixing full-width and split sections. Very trendy in 2024–2025 dev portfolios.</p>
+    </div>
+  </div>
+
+</div>
