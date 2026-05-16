@@ -14,43 +14,46 @@ interface Project {
 }
 
 const featured: Project = {
-  title: 'Your Best Project Name',
+  title: 'Search Job Links',
   description:
-    'A short 2–3 sentence description of what this project does, the problem it solves, and why it is impressive. Keep it punchy and results-focused.',
-  tech: ['Next.js', 'TypeScript', 'Tailwind', 'Prisma'],
-  live: 'https://your-live-demo.com',
-  github: 'https://github.com/NikulGoyani369',
+    'A live React + TypeScript web app that aggregates and surfaces job listings with a fast, searchable interface. Built with Vite for instant dev feedback and deployed on GitHub Pages — a practical tool born from real job-hunting needs.',
+  tech: ['React', 'TypeScript', 'Vite', 'CSS'],
+  live: 'https://nikulgoyani369.github.io/Search-Job-Links/',
+  github: 'https://github.com/NikulGoyani369/Search-Job-Links',
   gradient: 'from-[#1a1a2e] to-[#16213e]',
-  emoji: '🚀',
+  emoji: '🔍',
 };
 
 const projects: Project[] = [
   {
-    title: 'Project Two',
-    description: 'Brief description of what this does and why it matters.',
-    tech: ['React', 'Node.js', 'MongoDB'],
+    title: 'Car Management API',
+    description:
+      'Full-stack REST API + CLI client for managing car manufacturers and models. Features offline-first sync — the CLI works locally when the server is down and auto-syncs on reconnection.',
+    tech: ['TypeScript', 'Node.js', 'MongoDB', 'REST API'],
     live: '#',
-    github: '#',
+    github: 'https://github.com/NikulGoyani369/car-management',
     gradient: 'from-[#1a1a2e] to-[#2d1b4e]',
-    emoji: '🛍️',
+    emoji: '🚗',
   },
   {
-    title: 'Project Three',
-    description: 'Brief description of what this does and why it matters.',
-    tech: ['React', 'D3.js', 'REST API'],
+    title: 'Playwright Test Automation',
+    description:
+      'Hands-on test automation suite using Playwright and TypeScript, covering browser automation, assertions, and end-to-end testing patterns — directly applied in professional V&V work.',
+    tech: ['Playwright', 'TypeScript', 'E2E Testing', 'Node.js'],
     live: '#',
-    github: '#',
+    github: 'https://github.com/NikulGoyani369/introduction-to-playwright',
     gradient: 'from-[#0f1f2e] to-[#1a3a4e]',
-    emoji: '📊',
+    emoji: '🎭',
   },
   {
-    title: 'Project Four',
-    description: 'Brief description of what this does and why it matters.',
-    tech: ['Next.js', 'Supabase', 'Tailwind'],
+    title: 'Master Thesis (Python)',
+    description:
+      'Academic research project from the MSc in Computer Engineering at University of Duisburg-Essen. A Python-based system with 288 commits, combining data processing, analysis, and a web-based output layer.',
+    tech: ['Python', 'HTML', 'Shell', 'Data Analysis'],
     live: '#',
-    github: '#',
+    github: 'https://github.com/NikulGoyani369/Master_Thesis',
     gradient: 'from-[#1a2e1a] to-[#1a4e2d]',
-    emoji: '🌿',
+    emoji: '🎓',
   },
 ];
 
@@ -68,14 +71,14 @@ const Projects = () => (
   <section
     id="projects"
     className="px-6 lg:px-24 py-24"
-    style={{ background: '#0f0f1a' }}
+    style={{ background: 'var(--bg-primary)' }}
   >
     <div className="max-w-5xl mx-auto">
       <div className="flex items-end justify-between mb-12 flex-wrap gap-4">
         <div>
           <SectionTag>Projects</SectionTag>
-          <h2 className="text-white">
-            Things I&apos;ve <span className="text-violet-400">built</span>
+          <h2 className="text-slate-900 dark:text-white">
+            Things I&apos;ve <span className="text-violet-400">worked on</span>
           </h2>
         </div>
         <a
@@ -114,7 +117,7 @@ const Projects = () => (
           <span className="inline-block text-[9px] uppercase tracking-widest text-violet-400 bg-violet-400/10 border border-violet-400/20 px-3 py-1 rounded-full mb-4 w-fit">
             ⭐ Featured Project
           </span>
-          <h3 className="text-lg font-bold text-white mb-3">{featured.title}</h3>
+          <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3">{featured.title}</h3>
           <p className="text-xs text-slate-500 leading-relaxed mb-4">
             {featured.description}
           </p>
@@ -122,7 +125,7 @@ const Projects = () => (
             {featured.tech.map((t) => (
               <span
                 key={t}
-                className="text-[10px] text-slate-500 border border-[#1e293b] px-2 py-0.5 rounded"
+                className="text-[10px] text-slate-500 border border-slate-200 dark:border-[#1e293b] px-2 py-0.5 rounded"
               >
                 {t}
               </span>
@@ -141,7 +144,7 @@ const Projects = () => (
               href={featured.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#1e293b] text-slate-400 text-xs uppercase tracking-widest px-5 py-2.5 rounded-md hover:border-violet-400/40 hover:text-violet-400 transition-colors"
+              className="border border-slate-200 dark:border-[#1e293b] text-slate-500 dark:text-slate-400 text-xs uppercase tracking-widest px-5 py-2.5 rounded-md hover:border-violet-400/40 hover:text-violet-400 transition-colors"
             >
               GitHub →
             </a>
@@ -161,7 +164,7 @@ const Projects = () => (
           <motion.div
             key={p.title}
             variants={cardVariants}
-            className="border border-[#1e293b] bg-white/[0.02] rounded-xl overflow-hidden hover:-translate-y-1 hover:border-violet-400/30 transition-all duration-300"
+            className="border border-slate-200 dark:border-[#1e293b] bg-black/[0.02] dark:bg-white/[0.02] rounded-xl overflow-hidden hover:-translate-y-1 hover:border-violet-400/30 transition-all duration-300"
           >
             <div
               className={`bg-gradient-to-br ${p.gradient} h-28 flex items-center justify-center text-4xl`}
@@ -169,7 +172,7 @@ const Projects = () => (
               {p.emoji}
             </div>
             <div className="p-5">
-              <h3 className="text-sm font-bold text-slate-200 mb-2">{p.title}</h3>
+              <h3 className="text-sm font-bold text-slate-800 dark:text-slate-200 mb-2">{p.title}</h3>
               <p className="text-xs text-slate-500 leading-relaxed mb-3">
                 {p.description}
               </p>
@@ -177,7 +180,7 @@ const Projects = () => (
                 {p.tech.map((t) => (
                   <span
                     key={t}
-                    className="text-[9px] text-slate-500 border border-[#1e293b] px-2 py-0.5 rounded"
+                    className="text-[9px] text-slate-500 border border-slate-200 dark:border-[#1e293b] px-2 py-0.5 rounded"
                   >
                     {t}
                   </span>

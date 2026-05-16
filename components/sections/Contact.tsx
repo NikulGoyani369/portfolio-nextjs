@@ -10,8 +10,16 @@ import Footer from '../ui/Footer';
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
 const socials = [
-  { label: 'GitHub', icon: AiFillGithub, href: 'https://github.com/NikulGoyani369' },
-  { label: 'LinkedIn', icon: AiFillLinkedin, href: 'https://linkedin.com/in/' },
+  {
+    label: 'GitHub',
+    icon: AiFillGithub,
+    href: 'https://github.com/NikulGoyani369',
+  },
+  {
+    label: 'LinkedIn',
+    icon: AiFillLinkedin,
+    href: 'https://www.linkedin.com/in/nikulkumar-goyani/',
+  },
   { label: 'Twitter', icon: AiOutlineTwitter, href: 'https://twitter.com/' },
 ];
 
@@ -49,17 +57,17 @@ const Contact = () => {
   };
 
   const inputClass =
-    'w-full bg-white/[0.03] border border-[#1e293b] rounded-lg px-4 py-3 text-xs text-slate-200 placeholder-slate-600 focus:outline-none focus:border-violet-500/50 focus:bg-violet-400/[0.04] transition-colors';
+    'w-full bg-white/[0.5] dark:bg-white/[0.03] border border-slate-200 dark:border-[#1e293b] rounded-lg px-4 py-3 text-xs text-slate-800 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-violet-500/50 focus:bg-violet-400/[0.04] transition-colors';
 
   return (
     <section
       id="contact"
       className="px-6 lg:px-24 py-24"
-      style={{ background: '#080810' }}
+      style={{ background: 'var(--bg-secondary)' }}
     >
       <div className="max-w-5xl mx-auto">
         <SectionTag>Contact</SectionTag>
-        <h2 className="text-white mb-3">
+        <h2 className="text-slate-900 dark:text-white mb-3">
           Let&apos;s <span className="text-violet-400">work together</span>
         </h2>
         <p className="text-sm text-slate-500 max-w-md leading-relaxed mb-12">
@@ -80,12 +88,12 @@ const Contact = () => {
                 {
                   icon: <AiOutlineMail size={20} />,
                   label: 'Email',
-                  value: 'kabuterlokhani@gmail.com',
+                  value: 'gnikul39@gmail.com',
                 },
                 {
                   icon: <MdLocationOn size={20} />,
                   label: 'Location',
-                  value: 'Your City, Country',
+                  value: 'Chemnitz, Germany',
                 },
                 {
                   icon: <span className="text-base">⚡</span>,
@@ -109,7 +117,9 @@ const Contact = () => {
                     <div className="text-[10px] text-slate-500 uppercase tracking-widest mb-0.5">
                       {label}
                     </div>
-                    <div className={`text-sm ${valueClass ?? 'text-slate-200'}`}>
+                    <div
+                      className={`text-sm ${valueClass ?? 'text-slate-700 dark:text-slate-200'}`}
+                    >
                       {value}
                     </div>
                   </div>
@@ -124,7 +134,7 @@ const Contact = () => {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 border border-[#1e293b] bg-white/[0.02] rounded-xl py-3 text-xs text-slate-500 hover:border-violet-400/30 hover:text-violet-400 transition-colors"
+                  className="flex-1 flex items-center justify-center gap-2 border border-slate-200 dark:border-[#1e293b] bg-black/[0.02] dark:bg-white/[0.02] rounded-xl py-3 text-xs text-slate-500 hover:border-violet-400/30 hover:text-violet-400 transition-colors"
                 >
                   <Icon size={16} />
                   {label}
@@ -144,7 +154,10 @@ const Contact = () => {
           >
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label htmlFor="contact-name" className="block text-[10px] text-slate-500 uppercase tracking-widest mb-2">
+                <label
+                  htmlFor="contact-name"
+                  className="block text-[10px] text-slate-500 uppercase tracking-widest mb-2"
+                >
                   Name
                 </label>
                 <input
@@ -158,7 +171,10 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="contact-email" className="block text-[10px] text-slate-500 uppercase tracking-widest mb-2">
+                <label
+                  htmlFor="contact-email"
+                  className="block text-[10px] text-slate-500 uppercase tracking-widest mb-2"
+                >
                   Email
                 </label>
                 <input
@@ -175,7 +191,10 @@ const Contact = () => {
             </div>
 
             <div>
-              <label htmlFor="contact-subject" className="block text-[10px] text-slate-500 uppercase tracking-widest mb-2">
+              <label
+                htmlFor="contact-subject"
+                className="block text-[10px] text-slate-500 uppercase tracking-widest mb-2"
+              >
                 Subject
               </label>
               <input
@@ -190,7 +209,10 @@ const Contact = () => {
             </div>
 
             <div>
-              <label htmlFor="contact-message" className="block text-[10px] text-slate-500 uppercase tracking-widest mb-2">
+              <label
+                htmlFor="contact-message"
+                className="block text-[10px] text-slate-500 uppercase tracking-widest mb-2"
+              >
                 Message
               </label>
               <textarea

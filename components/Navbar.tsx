@@ -1,8 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { BsSun, BsMoon } from 'react-icons/bs';
 
 const navLinks = [
   { label: 'Home', href: '#' },
@@ -14,21 +16,26 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
+
+  const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
 
   return (
     <motion.nav
-      className="fixed w-full z-[100] border-b"
+      className="fixed w-full z-[100] border-b border-violet-400/[0.12]"
       style={{
-        background: 'rgba(15,15,26,0.85)',
+        background: 'var(--navbar-bg)',
         backdropFilter: 'blur(12px)',
-        borderColor: 'rgba(167,139,250,0.12)',
       }}
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <div className="flex items-center justify-between px-6 lg:px-16 h-16">
-        <a href="#" className="text-xl font-black text-white">
+        <a href="#" className="text-xl font-black text-slate-900 dark:text-white">
           N<span className="text-violet-400">.</span>
         </a>
 
@@ -37,7 +44,7 @@ const Navbar = () => {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="text-xs uppercase tracking-widest text-slate-400 hover:text-violet-400 transition-colors"
+                className="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-violet-400 transition-colors"
               >
                 {link.label}
               </a>
@@ -45,22 +52,44 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:block text-xs uppercase tracking-widest text-violet-400 border border-violet-400/40 px-4 py-2 rounded-md hover:bg-violet-400/10 transition-colors"
-        >
-          Resume ↗
-        </a>
+        <div className="hidden md:flex items-center gap-3">
+          {mounted && (
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="text-slate-500 dark:text-slate-400 hover:text-violet-400 transition-colors p-2 rounded-md hover:bg-violet-400/10"
+            >
+              {theme === 'dark' ? <BsSun size={16} /> : <BsMoon size={16} />}
+            </button>
+          )}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs uppercase tracking-widest text-violet-400 border border-violet-400/40 px-4 py-2 rounded-md hover:bg-violet-400/10 transition-colors"
+          >
+            Resume ↗
+          </a>
+        </div>
 
-        <button
-          className="md:hidden text-slate-400 hover:text-violet-400"
-          onClick={() => setOpen(true)}
-          aria-label="Open menu"
-        >
-          <AiOutlineMenu size={24} />
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          {mounted && (
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="text-slate-500 dark:text-slate-400 hover:text-violet-400 transition-colors p-1.5 rounded-md"
+            >
+              {theme === 'dark' ? <BsSun size={16} /> : <BsMoon size={16} />}
+            </button>
+          )}
+          <button
+            className="text-slate-500 dark:text-slate-400 hover:text-violet-400"
+            onClick={() => setOpen(true)}
+            aria-label="Open menu"
+          >
+            <AiOutlineMenu size={24} />
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -76,7 +105,7 @@ const Navbar = () => {
             <motion.div
               className="fixed top-0 left-0 w-[75%] sm:w-[60%] h-screen z-[200] p-10 flex flex-col"
               style={{
-                background: '#0f0f1a',
+                background: 'var(--sidebar-bg)',
                 borderRight: '1px solid rgba(167,139,250,0.15)',
               }}
               initial={{ x: '-100%' }}
@@ -85,12 +114,12 @@ const Navbar = () => {
               transition={{ type: 'tween', duration: 0.3 }}
             >
               <div className="flex justify-between items-center mb-12">
-                <span className="text-xl font-black text-white">
+                <span className="text-xl font-black text-slate-900 dark:text-white">
                   N<span className="text-violet-400">.</span>
                 </span>
                 <button
                   onClick={() => setOpen(false)}
-                  className="text-slate-400 hover:text-violet-400"
+                  className="text-slate-500 dark:text-slate-400 hover:text-violet-400"
                   aria-label="Close menu"
                 >
                   <AiOutlineClose size={24} />
@@ -101,7 +130,7 @@ const Navbar = () => {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-lg uppercase tracking-widest text-slate-300 hover:text-violet-400 transition-colors"
+                      className="text-lg uppercase tracking-widest text-slate-600 dark:text-slate-300 hover:text-violet-400 transition-colors"
                       onClick={() => setOpen(false)}
                     >
                       {link.label}
