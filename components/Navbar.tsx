@@ -67,7 +67,7 @@ const Navbar = () => {
         {open && (
           <>
             <motion.div
-              className="fixed inset-0 bg-black/70 z-[100]"
+              className="fixed inset-0 bg-black/70 z-[150]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -113,6 +113,7 @@ const Navbar = () => {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
                 className="mt-auto text-xs uppercase tracking-widest text-violet-400 border border-violet-400/40 px-4 py-3 rounded-md text-center hover:bg-violet-400/10 transition-colors"
               >
                 Resume ↗
