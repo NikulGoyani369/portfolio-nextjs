@@ -5,9 +5,9 @@ import Image from 'next/image';
 import SectionTag from '../ui/SectionTag';
 
 const stats = [
-  { value: '2+', label: 'Years exp.' },
-  { value: '10+', label: 'Projects' },
-  { value: '5+', label: 'Tech stack' },
+  { value: '6+', label: 'Years exp.' },
+  { value: '9+', label: 'Companies' },
+  { value: 'ISTQB', label: 'Certified' },
 ];
 
 const fadeLeft = {
@@ -24,7 +24,7 @@ const About = () => (
   <section
     id="about"
     className="px-6 lg:px-24 py-24"
-    style={{ background: '#0f0f1a' }}
+    style={{ background: 'var(--bg-primary)' }}
   >
     <div className="grid lg:grid-cols-[1fr_1.3fr] gap-16 items-center max-w-5xl mx-auto">
       {/* Left: photo */}
@@ -45,7 +45,10 @@ const About = () => (
               className="object-cover w-full h-full"
             />
           </div>
-          <div className="absolute -bottom-4 -right-4 flex items-center gap-2 bg-[#0f0f1a] border border-violet-400/25 rounded-xl px-3 py-2 text-xs text-violet-400 tracking-wide whitespace-nowrap">
+          <div
+            className="absolute -bottom-4 -right-4 flex items-center gap-2 border border-violet-400/25 rounded-xl px-3 py-2 text-xs text-violet-400 tracking-wide whitespace-nowrap"
+            style={{ background: 'var(--bg-primary)' }}
+          >
             <span className="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_6px_#4ade80]" />
             Available for work
           </div>
@@ -60,25 +63,29 @@ const About = () => (
         viewport={{ once: true }}
       >
         <SectionTag>About me</SectionTag>
-        <h2 className="text-white mb-4">
+        <h2 className="text-slate-900 dark:text-white mb-4">
           Passionate about{' '}
-          <span className="text-violet-400">great interfaces</span>
+          <span className="text-violet-400">software quality</span>
         </h2>
         <p className="text-sm text-slate-500 leading-relaxed mb-3">
-          I&apos;m Nikul Goyani, a front-end developer who specialises in building
-          fast, accessible, and visually polished web applications using React and
-          Next.js.
+          I&apos;m Nikulkumar Goyani, a Senior Software Test Engineer and
+          Verification &amp; Validation Expert based in Chemnitz, Germany.
+          With 6+ years of experience across regulated industries, I specialise
+          in quality engineering, test automation, and ensuring software meets
+          the highest standards.
         </p>
         <p className="text-sm text-slate-500 leading-relaxed mb-6">
-          When I&apos;m not coding, I&apos;m exploring new UI patterns, contributing
-          to open source, or sharpening my design eye on Dribbble.
+          Currently at Straumann Group, I drive V&amp;V activities for medical
+          software systems. ISTQB CTFL 4.0 certified with a background spanning
+          frontend development, backend testing, and full-cycle SDLC quality
+          assurance. Fluent in English and German.
         </p>
 
         <div className="grid grid-cols-3 gap-3 mb-6">
           {stats.map(({ value, label }) => (
             <div
               key={label}
-              className="border border-[#1e293b] rounded-xl p-4 text-center"
+              className="border border-slate-200 dark:border-[#1e293b] rounded-xl p-4 text-center"
               style={{ background: 'rgba(167,139,250,0.04)' }}
             >
               <span className="block text-2xl font-black text-violet-400">{value}</span>

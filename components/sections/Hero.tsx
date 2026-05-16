@@ -14,21 +14,26 @@ const item = {
 };
 
 const socials = [
-  { label: 'GitHub', icon: AiFillGithub, href: 'https://github.com/NikulGoyani369' },
-  { label: 'LinkedIn', icon: AiFillLinkedin, href: 'https://linkedin.com/in/' },
-  { label: 'Email', icon: AiOutlineMail, href: 'mailto:kabuterlokhani@gmail.com' },
+  {
+    label: 'GitHub',
+    icon: AiFillGithub,
+    href: 'https://github.com/NikulGoyani369',
+  },
+  { label: 'LinkedIn', icon: AiFillLinkedin, href: 'https://www.linkedin.com/in/nikulkumar-goyani/' },
+  { label: 'Email', icon: AiOutlineMail, href: 'mailto:gnikul36@gmail.com' },
 ];
 
 const Hero = () => (
   <section
     className="relative min-h-screen flex items-center px-6 lg:px-24 overflow-hidden"
-    style={{ background: '#0f0f1a' }}
+    style={{ background: 'var(--bg-primary)' }}
   >
     {/* Radial violet glow top-right */}
     <div
       className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full pointer-events-none"
       style={{
-        background: 'radial-gradient(circle, rgba(167,139,250,0.15) 0%, transparent 70%)',
+        background:
+          'radial-gradient(circle, rgba(167,139,250,0.15) 0%, transparent 70%)',
       }}
     />
 
@@ -49,29 +54,36 @@ const Hero = () => (
         variants={item}
         className="inline-flex items-center gap-2 text-xs text-violet-400 tracking-widest uppercase mb-5 bg-violet-400/10 border border-violet-400/20 px-4 py-2 rounded-full"
       >
-        <span>▸</span> Front-End Developer
+        <span>▸</span> V&amp;V Expert · Software Test Engineer
       </motion.div>
 
       <motion.h1
         variants={item}
         className="text-5xl md:text-7xl font-black leading-tight mb-3"
       >
-        <span className="text-white">Hi, I&apos;m</span>
+        <span className="text-slate-900 dark:text-white">Hi, I&apos;m</span>
         <br />
         <span className="text-violet-400">Nikul</span>
-        <span className="text-white"> Goyani</span>
+        <span className="text-slate-900 dark:text-white">kumar Goyani</span>
       </motion.h1>
 
-      <motion.p variants={item} className="text-xl font-light text-slate-400 mb-4">
-        Building <span className="text-slate-300">fast, modern web experiences</span>
+      <motion.p
+        variants={item}
+        className="text-xl font-light text-slate-500 dark:text-slate-400 mb-4"
+      >
+        Delivering{' '}
+        <span className="text-slate-700 dark:text-slate-300">
+          reliable, high-quality software
+        </span>
       </motion.p>
 
       <motion.p
         variants={item}
         className="text-sm text-slate-500 leading-relaxed max-w-md mb-8"
       >
-        I craft pixel-perfect, accessible interfaces with React and Next.js.
-        Focused on clean code, smooth interactions, and shipping things that work.
+        ISTQB certified Senior Software Test Engineer with 6+ years of experience
+        in quality engineering, test automation, and V&amp;V in complex regulated
+        environments. Currently at Straumann Group, Chemnitz.
       </motion.p>
 
       <motion.div variants={item} className="flex gap-3 flex-wrap mb-10">
@@ -98,7 +110,7 @@ const Hero = () => (
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-xs text-slate-500 border border-[#1e293b] px-4 py-2 rounded-full hover:border-violet-400/50 hover:text-violet-400 transition-colors"
+            className="flex items-center gap-2 text-xs text-slate-500 border border-slate-200 dark:border-[#1e293b] px-4 py-2 rounded-full hover:border-violet-400/50 hover:text-violet-400 transition-colors"
           >
             <Icon size={14} />
             {label}
