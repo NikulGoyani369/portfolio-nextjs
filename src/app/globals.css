@@ -2,9 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --navbar-bg: rgba(248, 250, 252, 0.9);
+  --sidebar-bg: #f8fafc;
+  --border-subtle: #e2e8f0;
+}
+
+.dark {
+  --bg-primary: #0f0f1a;
+  --bg-secondary: #080810;
+  --navbar-bg: rgba(15, 15, 26, 0.85);
+  --sidebar-bg: #0f0f1a;
+  --border-subtle: #1e293b;
+}
+
 @layer base {
   body {
-    @apply bg-[#0f0f1a] text-slate-200 tracking-wide;
+    background: var(--bg-primary);
+    @apply text-slate-800 dark:text-slate-200 tracking-wide;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;

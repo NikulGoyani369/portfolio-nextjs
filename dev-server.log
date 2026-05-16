@@ -1,0 +1,12 @@
+
+> portfolio-nextjs@0.1.0 dev
+> next dev
+
+- warn Port 3000 is in use, trying 3001 instead.
+- ready started server on 0.0.0.0:3001, url: http://localhost:3001
+- [36minfo[39m Loaded env from C:\Users\Nikul\Documents\Portfolio\portfolio-nextjs\.env.local
+- [33mwarn[39m Found lockfile missing swc dependencies, patching...
+- [35mevent[39m compiled client and server successfully in 1143 ms (20 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 159 ms (20 modules)
+- [33mwarn[39m Lockfile was successfully patched, please run "npm install" to ensure @next/swc dependencies are downloaded
