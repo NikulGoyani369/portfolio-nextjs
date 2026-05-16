@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects Section Design</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #111; color: #e2e8f0; font-family: 'Segoe UI', system-ui, sans-serif; padding: 20px; }
+  .label { font-size: 11px; color: #94a3b8; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
+  h2 { font-size: 18px; color: #f1f5f9; margin-bottom: 6px; }
+  .subtitle { font-size: 13px; color: #64748b; margin-bottom: 24px; }
+
+  .mockup-wrap {
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #0f0f1a;
+    margin-bottom: 20px;
+  }
+
+  .section-projects { padding: 80px 40px; }
+
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+  .section-tag {
+    font-size: 11px; color: #a78bfa; letter-spacing: 2px;
+    text-transform: uppercase; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-tag::after { content: ''; height: 1px; background: rgba(167,139,250,0.2); width: 60px; }
+  .projects-heading { font-size: 32px; font-weight: 800; color: #fff; }
+  .projects-heading span { color: #a78bfa; }
+  .view-all {
+    font-size: 11px; color: #a78bfa; letter-spacing: 1px;
+    border: 1px solid rgba(167,139,250,0.3);
+    padding: 8px 16px; border-radius: 5px; cursor: pointer;
+    white-space: nowrap; margin-bottom: 4px;
+  }
+
+  /* FEATURED PROJECT */
+  .featured-project {
+    background: rgba(167,139,250,0.04);
+    border: 1px solid rgba(167,139,250,0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    margin-bottom: 20px;
+  }
+  .featured-preview {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .featured-preview::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg, transparent, transparent 30px,
+      rgba(167,139,250,0.03) 30px, rgba(167,139,250,0.03) 31px
+    ), repeating-linear-gradient(
+      90deg, transparent, transparent 30px,
+      rgba(167,139,250,0.03) 30px, rgba(167,139,250,0.03) 31px
+    );
+  }
+  .browser-mockup {
+    width: 200px; background: #0d0d14;
+    border: 1px solid rgba(167,139,250,0.2);
+    border-radius: 8px; overflow: hidden;
+    position: relative; z-index: 1;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+  .browser-bar {
+    background: #1a1a2e; padding: 6px 10px;
+    display: flex; align-items: center; gap: 5px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .browser-dot { width: 5px; height: 5px; border-radius: 50%; }
+  .browser-screen {
+    padding: 12px; min-height: 100px;
+    background: linear-gradient(135deg, #0d0d14, #1a1a2e);
+    font-size: 8px; color: #475569; line-height: 1.8;
+  }
+  .screen-line { background: rgba(167,139,250,0.15); border-radius: 2px; height: 5px; margin-bottom: 5px; }
+  .screen-line.short { width: 60%; }
+  .screen-line.med { width: 85%; }
+  .screen-accent { background: rgba(167,139,250,0.4); height: 18px; border-radius: 3px; width: 50%; margin-bottom: 8px; }
+
+  .featured-info { padding: 32px; display: flex; flex-direction: column; justify-content: center; }
+  .featured-badge {
+    display: inline-block; font-size: 9px; letter-spacing: 2px;
+    text-transform: uppercase; color: #a78bfa;
+    background: rgba(167,139,250,0.1); border: 1px solid rgba(167,139,250,0.2);
+    padding: 3px 10px; border-radius: 999px; margin-bottom: 14px; width: fit-content;
+  }
+  .featured-title { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+  .featured-desc { font-size: 12px; color: #64748b; line-height: 1.7; margin-bottom: 16px; }
+  .tech-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+  .tech-tag {
+    font-size: 10px; color: #64748b; background: rgba(255,255,255,0.04);
+    border: 1px solid #1e293b; padding: 3px 8px; border-radius: 4px;
+  }
+  .project-links { display: flex; gap: 10px; }
+  .link-btn {
+    font-size: 11px; padding: 7px 16px; border-radius: 5px; cursor: pointer;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .link-live { background: #a78bfa; color: #0f0f1a; font-weight: 700; }
+  .link-code { border: 1px solid #1e293b; color: #64748b; }
+
+  /* GRID PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .project-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .project-card:hover { border-color: rgba(167,139,250,0.3); }
+  .card-preview {
+    height: 100px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    position: relative; overflow: hidden;
+  }
+  .card-preview-1 { background: linear-gradient(135deg, #1a1a2e, #2d1b4e); }
+  .card-preview-2 { background: linear-gradient(135deg, #0f1f2e, #1a3a4e); }
+  .card-preview-3 { background: linear-gradient(135deg, #1a2e1a, #1a4e2d); }
+  .card-body-inner { padding: 16px; }
+  .card-title { font-size: 13px; font-weight: 700; color: #e2e8f0; margin-bottom: 6px; }
+  .card-desc { font-size: 11px; color: #475569; line-height: 1.6; margin-bottom: 12px; }
+  .card-stack { display: flex; gap: 4px; flex-wrap: wrap; }
+  .card-tag { font-size: 9px; color: #475569; border: 1px solid #1e293b; padding: 2px 6px; border-radius: 3px; }
+
+  .annotation {
+    background: #0f172a; border: 1px solid #1e293b; border-radius: 8px;
+    padding: 16px 20px; font-size: 12px; color: #64748b; line-height: 1.6;
+  }
+  .annotation strong { color: #a78bfa; }
+  .annotation ul { padding-left: 16px; margin-top: 8px; }
+  .annotation li { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<div class="label">Section 4 of 5 — Projects</div>
+<h2>Projects Section Design</h2>
+<p class="subtitle">1 featured project + 3-column card grid below</p>
+
+<div class="mockup-wrap">
+  <section class="section-projects">
+
+    <div class="section-header">
+      <div>
+        <div class="section-tag">Projects</div>
+        <h2 class="projects-heading">Things I've <span>built</span></h2>
+      </div>
+      <div class="view-all">View All on GitHub ↗</div>
+    </div>
+
+    <!-- FEATURED -->
+    <div class="featured-project">
+      <div class="featured-preview">
+        <div class="browser-mockup">
+          <div class="browser-bar">
+            <div class="browser-dot" style="background:#ff5f57"></div>
+            <div class="browser-dot" style="background:#febc2e"></div>
+            <div class="browser-dot" style="background:#28c840"></div>
+          </div>
+          <div class="browser-screen">
+            <div class="screen-accent"></div>
+            <div class="screen-line"></div>
+            <div class="screen-line short"></div>
+            <div class="screen-line med"></div>
+            <div class="screen-line short"></div>
+            <div class="screen-line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="featured-info">
+        <div class="featured-badge">⭐ Featured Project</div>
+        <div class="featured-title">Your Best Project Name</div>
+        <p class="featured-desc">
+          A short 2–3 sentence description of what this project does, the problem it solves,
+          and why it's impressive. Keep it punchy.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Tailwind</span>
+          <span class="tech-tag">Prisma</span>
+        </div>
+        <div class="project-links">
+          <div class="link-btn link-live">Live Demo ↗</div>
+          <div class="link-btn link-code">GitHub →</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRID -->
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="card-preview card-preview-1">🛍️</div>
+        <div class="card-body-inner">
+          <div class="card-title">Project Two</div>
+          <p class="card-desc">Brief description of what this does and why it matters.</p>
+          <div class="card-stack">
+            <span class="card-tag">React</span>
+            <span class="card-tag">Node.js</span>
+            <span class="card-tag">MongoDB</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="card-preview card-preview-2">📊</div>
+        <div class="card-body-inner">
+          <div class="card-title">Project Three</div>
+          <p class="card-desc">Brief description of what this does and why it matters.</p>
+          <div class="card-stack">
+            <span class="card-tag">React</span>
+            <span class="card-tag">D3.js</span>
+            <span class="card-tag">REST API</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="card-preview card-preview-3">🌿</div>
+        <div class="card-body-inner">
+          <div class="card-title">Project Four</div>
+          <p class="card-desc">Brief description of what this does and why it matters.</p>
+          <div class="card-stack">
+            <span class="card-tag">Next.js</span>
+            <span class="card-tag">Supabase</span>
+            <span class="card-tag">Tailwind</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<div class="annotation">
+  <strong>Design notes:</strong>
+  <ul>
+    <li>Featured project: large 2-col card with browser mockup preview, description, tech tags, Live + GitHub links</li>
+    <li>3-col grid below for secondary projects — each has a colour gradient preview, title, desc, stack tags</li>
+    <li>"View All on GitHub ↗" button top-right links to your GitHub profile</li>
+    <li>Replace emoji placeholders with actual screenshots or project thumbnails (Next.js Image component)</li>
+    <li>Framer Motion: featured card slides in, grid cards stagger up one by one</li>
+    <li>Cards have hover lift effect (translateY -4px + border glow)</li>
+  </ul>
+</div>
+
+</body>
+</html>
