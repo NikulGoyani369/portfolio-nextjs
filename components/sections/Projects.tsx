@@ -140,8 +140,8 @@ const Projects = () => (
         variants={containerVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
         {projects.map((p) => (
           <motion.div key={p.title} variants={cardVariants}
-            className="rounded-[18px] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-violet-400/25"
-            style={{ background: 'rgba(255,255,255,0.03)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.07)' }}>
+            className="rounded-[18px] overflow-hidden transition-all duration-300 hover:-translate-y-1 border border-white/[0.07] hover:border-violet-400/25"
+            style={{ background: 'rgba(255,255,255,0.03)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
             <div className={`bg-gradient-to-br ${p.gradient} h-28 flex items-center justify-center text-4xl relative overflow-hidden`}>
               <div className="absolute inset-0"
                 style={{ backgroundImage: 'repeating-linear-gradient(0deg,transparent,transparent 18px,rgba(139,92,246,0.04) 18px,rgba(139,92,246,0.04) 19px),repeating-linear-gradient(90deg,transparent,transparent 18px,rgba(139,92,246,0.04) 18px,rgba(139,92,246,0.04) 19px)' }} />

@@ -65,8 +65,8 @@ const Skills = () => (
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (
                 <span key={skill}
-                  className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg transition-colors text-white/45 hover:border-violet-400/40"
-                  style={{ border: '1px solid rgba(255,255,255,0.07)', background: 'rgba(255,255,255,0.03)' }}>
+                  className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg transition-colors text-white/45 border border-white/[0.07] hover:border-violet-400/40"
+                  style={{ background: 'rgba(255,255,255,0.03)' }}>
                   <span className="w-1.5 h-1.5 rounded-full bg-violet-400/60 flex-shrink-0" />
                   {skill}
                 </span>
