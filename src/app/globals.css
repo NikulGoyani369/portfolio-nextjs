@@ -11,11 +11,11 @@
 }
 
 .dark {
-  --bg-primary: #0f0f1a;
-  --bg-secondary: #080810;
-  --navbar-bg: rgba(15, 15, 26, 0.85);
-  --sidebar-bg: #0f0f1a;
-  --border-subtle: #1e293b;
+  --bg-primary: #0a0a1a;
+  --bg-secondary: #0d0b1f;
+  --navbar-bg: rgba(255, 255, 255, 0.04);
+  --sidebar-bg: #0a0a1a;
+  --border-subtle: rgba(255, 255, 255, 0.05);
 }
 
 @layer base {
@@ -23,11 +23,17 @@
     background: var(--bg-primary);
     @apply text-slate-800 dark:text-slate-200 tracking-wide;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
-  }
+  h1, h2, h3, h4, h5, h6 { @apply font-bold; }
   h1 { @apply text-4xl sm:text-5xl md:text-6xl; }
   h2 { @apply text-3xl sm:text-4xl; }
   li { @apply cursor-pointer; }
   html { @apply scroll-smooth; }
+}
+
+@layer utilities {
+  .glass-input:focus {
+    border-color: rgba(139, 92, 246, 0.4) !important;
+    background: rgba(139, 92, 246, 0.04) !important;
+    outline: none;
+  }
 }
