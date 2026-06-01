@@ -42,7 +42,7 @@ const About = () => (
 
       <motion.div variants={fadeRight} initial="hidden" whileInView="show" viewport={{ once: true }}>
         <SectionTag>About me</SectionTag>
-        <h2 className="text-slate-900 dark:text-white mb-4">
+        <h2 className="text-white mb-4">
           Passionate about <span className="text-violet-400">software quality</span>
         </h2>
         <p className="text-sm leading-relaxed mb-3 text-white/45">
