@@ -1,11 +1,31 @@
 const Footer = () => (
-  <div className="mt-16 pt-8 border-t border-slate-200 dark:border-[#1e293b] flex items-center justify-between flex-wrap gap-4">
-    <span className="text-xl font-black text-slate-900 dark:text-white">
+  <div className="mt-16 pt-8 flex items-center justify-between flex-wrap gap-4"
+    style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+    <span className="text-lg font-black text-white">
       N<span className="text-violet-400">.</span>
     </span>
-    <span className="text-xs text-slate-400 dark:text-slate-600">
-      © 2026 Nikul Goyani · Built with Next.js &amp; Tailwind
+    <span className="text-xs text-center leading-relaxed" style={{ color: 'rgba(255,255,255,0.2)' }}>
+      © 2026 <span className="font-medium" style={{ color: 'rgba(167,139,250,0.6)' }}>Nikulkumar Goyani</span> · Built with Next.js &amp; Tailwind CSS
+      <br />Chemnitz, Germany · Open to opportunities
     </span>
+    <div className="flex items-center gap-3">
+      <div className="flex gap-4">
+        {[
+          { label: 'GitHub', href: 'https://github.com/NikulGoyani369' },
+          { label: 'LinkedIn', href: 'https://www.linkedin.com/in/nikulkumar-goyani/' },
+        ].map(({ label, href }) => (
+          <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+            className="text-xs uppercase tracking-widest transition-colors hover:text-violet-400 text-white/25"
+            style={{ letterSpacing: '1.5px' }}>
+            {label}
+          </a>
+        ))}
+      </div>
+      <a href="#" className="w-9 h-9 flex items-center justify-center rounded-[10px] text-violet-400 transition-colors hover:bg-violet-400/20"
+        style={{ background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.2)' }}>
+        ↑
+      </a>
+    </div>
   </div>
 );
 

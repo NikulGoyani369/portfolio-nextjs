@@ -1,7 +1,8 @@
 const SectionTag = ({ children }: { children: string }) => (
-  <div className="flex items-center gap-3 text-violet-400 text-xs tracking-widest uppercase mb-3">
+  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-[10px] text-violet-400 tracking-[0.2em] uppercase mb-4"
+    style={{ background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.2)' }}>
+    <span className="text-[8px]">◈</span>
     {children}
-    <span className="h-px bg-violet-400/20 w-[60px]" />
   </div>
 );
 
