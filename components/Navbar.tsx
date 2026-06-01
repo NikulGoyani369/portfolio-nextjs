@@ -63,7 +63,7 @@ const Navbar = () => {
               {theme === 'dark' ? <BsSun size={14} /> : <BsMoon size={14} />}
             </button>
           )}
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.linkedin.com/in/nikulkumar-goyani/" target="_blank" rel="noopener noreferrer"
             className="text-xs uppercase tracking-widest text-violet-400 px-4 py-2 rounded-lg transition-colors hover:bg-violet-400/10"
             style={{ border: '1px solid rgba(167,139,250,0.35)' }}>
             Resume ↗
@@ -115,7 +115,7 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/nikulkumar-goyani/" target="_blank" rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className="mt-auto text-xs uppercase tracking-widest text-violet-400 border border-violet-400/40 px-4 py-3 rounded-md text-center hover:bg-violet-400/10 transition-colors">
                 Resume ↗
