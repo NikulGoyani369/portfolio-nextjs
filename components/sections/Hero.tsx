@@ -104,7 +104,7 @@ const Hero = () => (
         {/* Photo card */}
         <div className="relative w-[220px] h-[290px] overflow-hidden"
           style={{ background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '24px', boxShadow: '0 24px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)' }}>
-          <Image src="/assets/NG.jpg" alt="Nikul Goyani" width={220} height={290} className="object-cover w-full h-full" />
+          <Image src="/assets/Nirmalbhai.jpg" alt="Nikul Goyani" width={220} height={290} className="object-cover w-full h-full" />
           <div className="absolute inset-0 pointer-events-none"
             style={{ background: 'linear-gradient(to bottom, transparent 50%, rgba(109,40,217,0.3) 100%)' }} />
         </div>
