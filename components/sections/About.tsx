@@ -6,7 +6,7 @@ import SectionTag from '../ui/SectionTag';
 
 const stats = [
   { value: '6+', label: 'Years exp.' },
-  { value: '9+', label: 'Companies' },
+  { value: '10+', label: 'Companies' },
   { value: 'ISTQB', label: 'Certified' },
 ];
 
