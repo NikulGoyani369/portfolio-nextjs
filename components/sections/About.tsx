@@ -21,87 +21,61 @@ const fadeRight = {
 };
 
 const About = () => (
-  <section
-    id="about"
-    className="px-6 lg:px-24 py-24"
-    style={{ background: 'var(--bg-primary)' }}
-  >
-    <div className="grid lg:grid-cols-[1fr_1.3fr] gap-16 items-center max-w-5xl mx-auto">
-      {/* Left: photo */}
-      <motion.div
-        className="flex justify-center lg:justify-start"
-        variants={fadeLeft}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-      >
+  <section id="about" className="px-6 lg:px-24 py-24" style={{ background: 'var(--bg-secondary)' }}>
+    <div className="grid lg:grid-cols-[auto_1fr] gap-16 items-center max-w-5xl mx-auto">
+      <motion.div className="flex justify-center lg:justify-start"
+        variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true }}>
         <div className="relative">
-          <div className="w-[220px] h-[280px] rounded-2xl border-2 border-violet-400/25 overflow-hidden bg-[#1e1e3f]">
-            <Image
-              src="/assets/NG.jpg"
-              alt="Nikul Goyani"
-              width={220}
-              height={280}
-              className="object-cover w-full h-full"
-            />
+          <div className="w-[200px] h-[260px] overflow-hidden relative"
+            style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '20px', boxShadow: '0 20px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08)' }}>
+            <Image src="/assets/NG.jpg" alt="Nikul Goyani" width={200} height={260} className="object-cover w-full h-full" />
+            <div className="absolute inset-0 pointer-events-none"
+              style={{ background: 'linear-gradient(to bottom, transparent 55%, rgba(109,40,217,0.35) 100%)' }} />
           </div>
-          <div
-            className="absolute -bottom-4 -right-4 flex items-center gap-2 border border-violet-400/25 rounded-xl px-3 py-2 text-xs text-violet-400 tracking-wide whitespace-nowrap"
-            style={{ background: 'var(--bg-primary)' }}
-          >
-            <span className="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_6px_#4ade80]" />
-            Available for work
+          <div className="absolute -bottom-3 -right-3 flex items-center gap-2 whitespace-nowrap"
+            style={{ background: 'rgba(10,10,26,0.92)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', border: '1px solid rgba(139,92,246,0.3)', borderRadius: '100px', padding: '5px 12px', boxShadow: '0 4px 16px rgba(0,0,0,0.4)' }}>
+            <span className="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" style={{ boxShadow: '0 0 6px #4ade80' }} />
+            <span className="text-violet-400 text-[9px] tracking-widest uppercase">Available for work</span>
           </div>
         </div>
       </motion.div>
 
-      {/* Right: content */}
-      <motion.div
-        variants={fadeRight}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-      >
+      <motion.div variants={fadeRight} initial="hidden" whileInView="show" viewport={{ once: true }}>
         <SectionTag>About me</SectionTag>
         <h2 className="text-slate-900 dark:text-white mb-4">
-          Passionate about{' '}
-          <span className="text-violet-400">software quality</span>
+          Passionate about <span className="text-violet-400">software quality</span>
         </h2>
-        <p className="text-sm text-slate-500 leading-relaxed mb-3">
-          I&apos;m Nikulkumar Goyani, a Senior Software Test Engineer and
-          Verification &amp; Validation Expert based in Chemnitz, Germany.
-          With 6+ years of experience across regulated industries, I specialise
-          in quality engineering, test automation, and ensuring software meets
-          the highest standards.
+        <p className="text-sm leading-relaxed mb-3 text-white/45">
+          I&apos;m Nikulkumar Goyani, a{' '}
+          <span className="text-white/75 font-medium">Senior Software Test Engineer and
+          Verification &amp; Validation Expert</span>{' '}based in Chemnitz, Germany. With 6+ years of experience across
+          regulated industries, I specialise in quality engineering, test automation, and ensuring software meets the
+          highest standards.
         </p>
-        <p className="text-sm text-slate-500 leading-relaxed mb-6">
-          Currently at Straumann Group, I drive V&amp;V activities for medical
-          software systems. ISTQB CTFL 4.0 certified with a background spanning
-          frontend development, backend testing, and full-cycle SDLC quality
-          assurance. Fluent in English and German.
+        <p className="text-sm leading-relaxed mb-6 text-white/45">
+          Currently at{' '}
+          <span className="text-white/75 font-medium">Straumann Group</span>, I drive V&amp;V
+          activities for medical software systems. ISTQB CTFL 4.0 certified with a background spanning frontend
+          development, backend testing, and full-cycle SDLC quality assurance. Fluent in English and German.
         </p>
 
         <div className="grid grid-cols-3 gap-3 mb-6">
           {stats.map(({ value, label }) => (
-            <div
-              key={label}
-              className="border border-slate-200 dark:border-[#1e293b] rounded-xl p-4 text-center"
-              style={{ background: 'rgba(167,139,250,0.04)' }}
-            >
+            <div key={label} className="relative rounded-2xl p-4 text-center overflow-hidden"
+              style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <div className="absolute top-0 left-0 right-0 h-px"
+                style={{ background: 'linear-gradient(to right, transparent, rgba(167,139,250,0.4), transparent)' }} />
               <span className="block text-2xl font-black text-violet-400">{value}</span>
-              <span className="text-[10px] text-slate-500 uppercase tracking-widest">
+              <span className="block text-[9px] uppercase tracking-widest mt-1 text-white/30">
                 {label}
               </span>
             </div>
           ))}
         </div>
 
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-xs text-violet-400 border border-violet-400/30 px-5 py-3 rounded-md hover:bg-violet-400/10 transition-colors uppercase tracking-widest"
-        >
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-xs text-violet-400 uppercase tracking-widest px-5 py-3 rounded-xl transition-colors hover:bg-violet-400/10"
+          style={{ background: 'rgba(167,139,250,0.06)', border: '1px solid rgba(167,139,250,0.25)' }}>
           Download Resume ↗
         </a>
       </motion.div>
