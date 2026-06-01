@@ -28,7 +28,7 @@ const About = () => (
         <div className="relative">
           <div className="w-[200px] h-[260px] overflow-hidden relative"
             style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '20px', boxShadow: '0 20px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08)' }}>
-            <Image src="/assets/NG.jpg" alt="Nikul Goyani" width={200} height={260} className="object-cover w-full h-full" />
+            <Image src="/assets/Nirmalbhai.jpg" alt="Nikul Goyani" width={200} height={260} className="object-cover w-full h-full" />
             <div className="absolute inset-0 pointer-events-none"
               style={{ background: 'linear-gradient(to bottom, transparent 55%, rgba(109,40,217,0.35) 100%)' }} />
           </div>
