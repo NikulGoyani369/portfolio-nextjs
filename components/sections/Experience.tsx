@@ -15,38 +15,65 @@ interface ExperienceEntry {
 
 const entries: ExperienceEntry[] = [
   {
-    role: 'Sr. Software Test Engineer',
+    role: 'Verification and Validation Expert',
     company: 'Straumann Group',
     location: 'Chemnitz, Germany',
-    period: '2023 – Present',
+    period: 'Oct 2024 – Present',
     description:
-      'Leading V&V activities for medical software systems in a regulated environment. Driving test strategy, automation frameworks, and cross-team quality processes.',
-    tags: ['V&V', 'Test Automation', 'Medical Software', 'ISTQB CTFL 4.0'],
+      'Drive and execute V&V activities for software systems in regulated environments. Define, design, and perform manual and automated test cases to ensure software meets specified requirements. Act as technical point of contact for software quality, supporting continuous improvement across cross-functional teams.',
+    tags: ['V&V', 'Test Automation', 'Regulated Environments', 'ISTQB CTFL 4.0', 'SDLC'],
     current: true,
   },
   {
-    role: 'Software Test Engineer',
-    company: 'Previous Company',
-    location: 'Germany',
-    period: '2021 – 2023',
+    role: 'Software Developer',
+    company: 'DEBAG Deutsche Backofenbau GmbH',
+    location: 'Bautzen, Germany',
+    period: 'Jul 2023 – Sep 2024',
     description:
-      'End-to-end quality assurance across full SDLC. Manual and automated testing, BDD with Gherkin, REST API testing and CI/CD integration.',
-    tags: ['Selenium', 'BDD / Gherkin', 'REST API', 'CI/CD'],
+      'Supported backend development, participated in code reviews, and performed bug fixing and backend optimisation. Programmed server logic, database queries, and REST API testing. Collaborated with frontend developers, designers, and project managers in an agile team.',
+    tags: ['Backend Development', 'REST APIs', 'Agile / Scrum', 'Unit Testing', 'Code Review'],
   },
   {
-    role: 'QA Engineer',
-    company: 'Multiple Companies',
-    location: 'India & Europe',
-    period: '2018 – 2021',
+    role: 'Frontend Web Developer',
+    company: 'pure::variants',
+    location: 'Magdeburg, Germany',
+    period: 'Dec 2022 – May 2023',
     description:
-      'Functional, regression and integration testing across web and mobile platforms. Agile/Scrum teams, JIRA tracking, and stakeholder reporting.',
-    tags: ['Manual Testing', 'Agile / Scrum', 'JIRA'],
+      'Performed requirements analysis for web applications. Designed and implemented unit tests and E2E tests for components. Improved web-based components to enhance usability and overall user experience.',
+    tags: ['React', 'TypeScript', 'Unit Testing', 'E2E Testing', 'Component Design'],
+  },
+  {
+    role: 'Web Developer',
+    company: 'INTERGATOR SMART SEARCH by interface projects GmbH',
+    location: 'Dresden, Germany',
+    period: 'Feb 2022 – Nov 2022',
+    description:
+      'Developed business logic and master components for scaling an enterprise search engine. Designed and implemented a comprehensive search application for efficient document search across large-scale enterprise environments.',
+    tags: ['JavaScript', 'Frontend', 'Search Engine', 'Enterprise Apps', 'Web Components'],
+  },
+  {
+    role: 'Software Developer & Web Developer',
+    company: 'Impact Technology GmbH',
+    location: 'Essen, Germany',
+    period: 'Sep 2020 – Nov 2021',
+    description:
+      'Developed complex and distributed web applications including shopping cart components and UI wireframes. Worked across frontend and backend layers to deliver scalable product features.',
+    tags: ['JavaScript', 'Frontend', 'Backend', 'UI/UX', 'Distributed Systems'],
+  },
+  {
+    role: 'Software Engineer Intern',
+    company: 'Intel Corporation',
+    location: 'Munich, Germany',
+    period: 'Oct 2018 – May 2019',
+    description:
+      'Frontend development for automatic data updates in connected components. Managed MySQL database, updated international datasets, and integrated data with frontend interfaces.',
+    tags: ['Frontend', 'MySQL', 'Data Integration', 'JavaScript'],
   },
 ];
 
 const containerVariants = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.15 } },
+  show: { transition: { staggerChildren: 0.12 } },
 };
 
 const cardVariants = {
@@ -62,7 +89,7 @@ const Experience = () => (
         Where I&apos;ve <span className="text-violet-400">worked</span>
       </h2>
       <p className="text-sm leading-relaxed max-w-md mb-12 text-white/35">
-        6+ years of quality engineering across regulated industries and international teams.
+        6+ years across quality engineering, software development, and V&amp;V in regulated environments across Germany.
       </p>
 
       <motion.div className="relative" variants={containerVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
@@ -70,7 +97,7 @@ const Experience = () => (
         <div className="absolute left-5 top-2 bottom-2 w-px"
           style={{ background: 'linear-gradient(to bottom, rgba(139,92,246,0.5), rgba(139,92,246,0.1), transparent)' }} />
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-5">
           {entries.map((entry) => (
             <motion.div key={entry.role + entry.company} variants={cardVariants} className="flex gap-4 sm:gap-8">
               {/* Dot */}
@@ -93,7 +120,7 @@ const Experience = () => (
                     : 'linear-gradient(to right, transparent, rgba(167,139,250,0.2), transparent)' }} />
 
                 <div className="flex items-start justify-between gap-3 mb-1 flex-wrap">
-                  <h3 className="text-base font-bold text-white">{entry.role}</h3>
+                  <h3 className="text-sm sm:text-base font-bold text-white">{entry.role}</h3>
                   <span className="text-[9px] tracking-widest uppercase text-violet-400 flex-shrink-0 px-3 py-1 rounded-full"
                     style={{ background: 'rgba(139,92,246,0.12)', border: '1px solid rgba(139,92,246,0.2)' }}>
                     {entry.period}
