@@ -15,7 +15,7 @@ const Footer = () => (
           { label: 'LinkedIn', href: 'https://www.linkedin.com/in/nikulkumar-goyani/' },
         ].map(({ label, href }) => (
           <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-            className="text-xs uppercase tracking-widest transition-colors hover:text-violet-400 text-white/25"
+            className="text-xs uppercase transition-colors hover:text-violet-400 text-white/25"
             style={{ letterSpacing: '1.5px' }}>
             {label}
           </a>
