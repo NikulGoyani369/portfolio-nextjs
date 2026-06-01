@@ -34,7 +34,7 @@ const cardVariants = {
 };
 
 const Skills = () => (
-  <section id="skills" className="px-6 lg:px-24 py-24" style={{ background: 'var(--bg-primary)' }}>
+  <section id="skills" className="px-6 lg:px-24 py-16 lg:py-24" style={{ background: 'var(--bg-primary)' }}>
     <div className="max-w-5xl mx-auto">
       <SectionTag>Skills</SectionTag>
       <h2 className="text-white mb-3">

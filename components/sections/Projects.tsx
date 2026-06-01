@@ -70,9 +70,9 @@ const gridLinePattern = {
 };
 
 const Projects = () => (
-  <section id="projects" className="px-6 lg:px-24 py-24" style={{ background: 'var(--bg-secondary)' }}>
+  <section id="projects" className="px-6 lg:px-24 py-16 lg:py-24" style={{ background: 'var(--bg-secondary)' }}>
     <div className="max-w-5xl mx-auto">
-      <div className="flex items-end justify-between mb-12 flex-wrap gap-4">
+      <div className="flex items-end justify-between mb-8 lg:mb-12 flex-wrap gap-4">
         <div>
           <SectionTag>Projects</SectionTag>
           <h2 className="text-white">

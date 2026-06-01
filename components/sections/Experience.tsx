@@ -55,7 +55,7 @@ const cardVariants = {
 };
 
 const Experience = () => (
-  <section id="experience" className="px-6 lg:px-24 py-24" style={{ background: 'var(--bg-secondary)' }}>
+  <section id="experience" className="px-6 lg:px-24 py-16 lg:py-24" style={{ background: 'var(--bg-secondary)' }}>
     <div className="max-w-5xl mx-auto">
       <SectionTag>Experience</SectionTag>
       <h2 className="text-white mb-3">
@@ -72,7 +72,7 @@ const Experience = () => (
 
         <div className="flex flex-col gap-6">
           {entries.map((entry) => (
-            <motion.div key={entry.role + entry.company} variants={cardVariants} className="flex gap-8">
+            <motion.div key={entry.role + entry.company} variants={cardVariants} className="flex gap-4 sm:gap-8">
               {/* Dot */}
               <div className="flex flex-col items-center flex-shrink-0 pt-5 w-10">
                 <div className="w-3 h-3 rounded-full relative z-10 flex-shrink-0"
@@ -82,7 +82,7 @@ const Experience = () => (
               </div>
 
               {/* Card */}
-              <div className="flex-1 relative rounded-2xl px-6 py-5 overflow-hidden"
+              <div className="flex-1 relative rounded-2xl px-4 sm:px-6 py-4 sm:py-5 overflow-hidden"
                 style={entry.current
                   ? { background: 'rgba(139,92,246,0.05)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(139,92,246,0.2)' }
                   : { background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.08)' }}>
