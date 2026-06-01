@@ -34,49 +34,40 @@ const cardVariants = {
 };
 
 const Skills = () => (
-  <section
-    id="skills"
-    className="px-6 lg:px-24 py-24"
-    style={{ background: 'var(--bg-secondary)' }}
-  >
+  <section id="skills" className="px-6 lg:px-24 py-24" style={{ background: 'var(--bg-primary)' }}>
     <div className="max-w-5xl mx-auto">
       <SectionTag>Skills</SectionTag>
-      <h2 className="text-slate-900 dark:text-white mb-3">
+      <h2 className="text-white mb-3">
         What I <span className="text-violet-400">work with</span>
       </h2>
-      <p className="text-sm text-slate-500 mb-12 max-w-md leading-relaxed">
+      <p className="text-sm leading-relaxed max-w-md mb-12 text-white/35">
         Skills and tools I use to deliver quality engineering, test automation,
         and V&amp;V across regulated software environments.
       </p>
 
-      <motion.div
-        className="grid md:grid-cols-2 lg:grid-cols-3 gap-5"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-      >
+      <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5"
+        variants={containerVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
         {categories.map(({ icon, label, skills }) => (
-          <motion.div
-            key={label}
-            variants={cardVariants}
-            className="border rounded-2xl p-6"
-            style={{
-              background: 'rgba(167,139,250,0.04)',
-              borderColor: 'rgba(167,139,250,0.1)',
-            }}
-          >
-            <div className="flex items-center gap-2 text-violet-400 text-xs tracking-widest uppercase mb-5">
-              <span>{icon}</span>
-              {label}
+          <motion.div key={label} variants={cardVariants}
+            className="relative rounded-[18px] p-6 overflow-hidden"
+            style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.07)' }}>
+            <div className="absolute top-0 left-0 right-0 h-px"
+              style={{ background: 'linear-gradient(to right, transparent, rgba(167,139,250,0.3), transparent)' }} />
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-10 flex items-center justify-center rounded-[10px] text-lg flex-shrink-0"
+                style={{ background: 'rgba(139,92,246,0.12)', border: '1px solid rgba(139,92,246,0.2)' }}>
+                {icon}
+              </div>
+              <span className="text-xs font-semibold tracking-widest uppercase text-violet-400/80">
+                {label}
+              </span>
             </div>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-[#1e293b] bg-white/[0.03] px-3 py-1.5 rounded-md hover:border-violet-400/40 hover:text-slate-800 dark:hover:text-slate-200 transition-colors"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-violet-400/60" />
+                <span key={skill}
+                  className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg transition-colors text-white/45 hover:border-violet-400/40"
+                  style={{ border: '1px solid rgba(255,255,255,0.07)', background: 'rgba(255,255,255,0.03)' }}>
+                  <span className="w-1.5 h-1.5 rounded-full bg-violet-400/60 flex-shrink-0" />
                   {skill}
                 </span>
               ))}
@@ -85,15 +76,14 @@ const Skills = () => (
         ))}
       </motion.div>
 
-      <div className="mt-10 pt-8 border-t border-slate-200 dark:border-[#1e293b] flex flex-wrap items-center gap-3">
-        <span className="text-[10px] text-slate-400 dark:text-slate-600 uppercase tracking-widest whitespace-nowrap">
+      <div className="mt-10 flex flex-wrap items-center gap-3 rounded-[14px] px-6 py-5"
+        style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)' }}>
+        <span className="text-[9px] uppercase tracking-widest whitespace-nowrap mr-2 text-white/20">
           Also familiar with
         </span>
         {alsoFamiliar.map((tech) => (
-          <span
-            key={tech}
-            className="text-xs text-slate-500 border border-slate-200 dark:border-[#1e293b] bg-white/[0.03] px-3 py-1 rounded"
-          >
+          <span key={tech} className="text-xs px-3 py-1 rounded-md text-white/30"
+            style={{ border: '1px solid rgba(255,255,255,0.06)' }}>
             {tech}
           </span>
         ))}
