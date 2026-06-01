@@ -21,8 +21,8 @@ const fadeRight = {
 };
 
 const About = () => (
-  <section id="about" className="px-6 lg:px-24 py-24" style={{ background: 'var(--bg-secondary)' }}>
-    <div className="grid lg:grid-cols-[auto_1fr] gap-16 items-center max-w-5xl mx-auto">
+  <section id="about" className="px-6 lg:px-24 py-16 lg:py-24" style={{ background: 'var(--bg-secondary)' }}>
+    <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-16 items-center max-w-5xl mx-auto">
       <motion.div className="flex justify-center lg:justify-start"
         variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true }}>
         <div className="relative">

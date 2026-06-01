@@ -45,7 +45,7 @@ const Contact = () => {
   const inputStyle = { background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.6)' };
 
   return (
-    <section id="contact" className="px-6 lg:px-24 py-24" style={{ background: 'var(--bg-primary)' }}>
+    <section id="contact" className="px-6 lg:px-24 py-16 lg:py-24" style={{ background: 'var(--bg-primary)' }}>
       <div className="max-w-5xl mx-auto">
         <SectionTag>Contact</SectionTag>
         <h2 className="text-white mb-3">
@@ -91,7 +91,7 @@ const Contact = () => {
 
           <motion.form onSubmit={handleSubmit} className="flex flex-col gap-4"
             initial={{ x: 40, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="contact-name" className="block text-[10px] uppercase tracking-widest mb-2 text-white/30">Name</label>
                 <input id="contact-name" name="name" value={form.name} onChange={handleChange} required placeholder="Your name" className={inputBase} style={inputStyle} />

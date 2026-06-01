@@ -1,14 +1,14 @@
 const Footer = () => (
-  <div className="mt-16 pt-8 flex items-center justify-between flex-wrap gap-4"
+  <div className="mt-12 lg:mt-16 pt-8 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-4"
     style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-    <span className="text-lg font-black text-white">
+    <span className="text-lg font-black text-white order-1">
       N<span className="text-violet-400">.</span>
     </span>
-    <span className="text-xs text-center leading-relaxed" style={{ color: 'rgba(255,255,255,0.2)' }}>
+    <span className="text-xs text-center leading-relaxed order-3 sm:order-2" style={{ color: 'rgba(255,255,255,0.2)' }}>
       © 2026 <span className="font-medium" style={{ color: 'rgba(167,139,250,0.6)' }}>Nikulkumar Goyani</span> · Built with Next.js &amp; Tailwind CSS
       <br />Chemnitz, Germany · Open to opportunities
     </span>
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 order-2 sm:order-3">
       <div className="flex gap-4">
         {[
           { label: 'GitHub', href: 'https://github.com/NikulGoyani369' },
