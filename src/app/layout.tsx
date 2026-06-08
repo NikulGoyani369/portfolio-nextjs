@@ -8,6 +8,24 @@ export const metadata = {
   title: 'Nikulkumar Goyani | Software Test Engineer & V&V Expert',
   description:
     'Senior Software Test Engineer and Verification & Validation Expert with 6+ years of experience in quality engineering, test automation, and software testing in regulated environments. ISTQB CTFL certified.',
+  icons: {
+    icon: '/icon.svg',
+  },
+  openGraph: {
+    title: 'Nikulkumar Goyani | Software Test Engineer & V&V Expert',
+    description:
+      'Senior Software Test Engineer with 6+ years of experience in quality engineering, test automation & V&V in regulated environments. ISTQB CTFL certified.',
+    url: 'https://nikulkumar-goyani.vercel.app',
+    siteName: 'Nikulkumar Goyani Portfolio',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nikulkumar Goyani | Software Test Engineer & V&V Expert',
+    description:
+      'Senior Software Test Engineer with 6+ years of experience in quality engineering, test automation & V&V in regulated environments.',
+  },
 };
 
 export default function RootLayout({

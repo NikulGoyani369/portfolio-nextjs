@@ -52,6 +52,33 @@ const projects: Project[] = [
     gradient: 'from-[#1a2e1a] to-[#1a4e2d]',
     emoji: '🎓',
   },
+  {
+    title: 'Portfolio Website',
+    description: 'Personal developer portfolio built with Next.js 13 App Router, TypeScript, and Framer Motion. Features dark-mode design, animated sections, EmailJS contact form, and OG image generation.',
+    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    live: '#',
+    github: 'https://github.com/NikulGoyani369/portfolio-nextjs',
+    gradient: 'from-[#1a1a2e] to-[#2a1040]',
+    emoji: '🌐',
+  },
+  {
+    title: 'Selenium Test Suite',
+    description: 'Reusable test automation framework using Selenium WebDriver and Python. Covers login flows, form validation, and regression scenarios with structured reporting and CI-ready configuration.',
+    tech: ['Python', 'Selenium', 'pytest', 'CI/CD'],
+    live: '#',
+    github: 'https://github.com/NikulGoyani369',
+    gradient: 'from-[#0f1a2e] to-[#1a2e3a]',
+    emoji: '🤖',
+  },
+  {
+    title: 'REST API Testing Framework',
+    description: 'API testing suite covering CRUD operations, authentication flows, and error handling for a Node.js backend. Validates response schemas, status codes, and edge cases with automated assertions.',
+    tech: ['TypeScript', 'Node.js', 'REST API', 'Jest'],
+    live: '#',
+    github: 'https://github.com/NikulGoyani369',
+    gradient: 'from-[#1e1a0f] to-[#2e2a1a]',
+    emoji: '⚙️',
+  },
 ];
 
 const cardVariants = {
