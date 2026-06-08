@@ -35,7 +35,7 @@ const About = () => (
           <div className="absolute -bottom-3 -right-3 flex items-center gap-2 whitespace-nowrap"
             style={{ background: 'rgba(10,10,26,0.92)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', border: '1px solid rgba(139,92,246,0.3)', borderRadius: '100px', padding: '5px 12px', boxShadow: '0 4px 16px rgba(0,0,0,0.4)' }}>
             <span className="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" style={{ boxShadow: '0 0 6px #4ade80' }} />
-            <span className="text-violet-400 text-[9px] tracking-widest uppercase">Available for work</span>
+            <span className="text-violet-400 text-[9px] tracking-widest uppercase">Open to Connect</span>
           </div>
         </div>
       </motion.div>
@@ -73,10 +73,37 @@ const About = () => (
           ))}
         </div>
 
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+        {/* Languages */}
+        <div className="mb-6">
+          <p className="text-[10px] uppercase tracking-widest mb-3 text-white/25">Languages</p>
+          <div className="flex flex-col gap-3">
+            {[
+              { flag: '🇬🇧', language: 'English', level: 'Fluent', pct: 95 },
+              { flag: '🇩🇪', language: 'German', level: 'B2 – Upper Intermediate', pct: 70 },
+            ].map(({ flag, language, level, pct }) => (
+              <div key={language} className="flex items-center gap-3">
+                <span className="text-xl flex-shrink-0">{flag}</span>
+                <div className="flex-1">
+                  <div className="flex justify-between mb-1">
+                    <span className="text-xs font-medium text-white/70">{language}</span>
+                    <span className="text-[10px] text-violet-400/70">{level}</span>
+                  </div>
+                  <div className="h-1 rounded-full w-full" style={{ background: 'rgba(255,255,255,0.07)' }}>
+                    <div
+                      className="h-1 rounded-full"
+                      style={{ width: `${pct}%`, background: 'linear-gradient(to right, #7c3aed, #a78bfa)' }}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <a href="https://www.linkedin.com/in/nikulkumar-goyani/" target="_blank" rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-xs text-violet-400 uppercase tracking-widest px-5 py-3 rounded-xl transition-colors hover:bg-violet-400/10"
           style={{ background: 'rgba(167,139,250,0.06)', border: '1px solid rgba(167,139,250,0.25)' }}>
-          Download Resume ↗
+          View LinkedIn ↗
         </a>
       </motion.div>
     </div>
