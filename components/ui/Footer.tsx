@@ -6,7 +6,7 @@ const Footer = () => (
     </span>
     <span className="text-xs text-center leading-relaxed order-3 sm:order-2" style={{ color: 'rgba(255,255,255,0.2)' }}>
       © 2026 <span className="font-medium" style={{ color: 'rgba(167,139,250,0.6)' }}>Nikulkumar Goyani</span> · Built with Next.js &amp; Tailwind CSS
-      <br />Chemnitz, Germany · Open to opportunities
+      <br />Chemnitz, Germany
     </span>
     <div className="flex items-center gap-3 order-2 sm:order-3">
       <div className="flex gap-4">

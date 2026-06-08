@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import { motion } from 'framer-motion';
-import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter, AiOutlineMail } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
 import { MdLocationOn } from 'react-icons/md';
 import SectionTag from '../ui/SectionTag';
 import Footer from '../ui/Footer';
@@ -12,7 +12,6 @@ type Status = 'idle' | 'sending' | 'success' | 'error';
 const socials = [
   { label: 'GitHub', icon: AiFillGithub, href: 'https://github.com/NikulGoyani369' },
   { label: 'LinkedIn', icon: AiFillLinkedin, href: 'https://www.linkedin.com/in/nikulkumar-goyani/' },
-  { label: 'Twitter', icon: AiOutlineTwitter, href: 'https://twitter.com/' },
 ];
 
 const Contact = () => {
@@ -36,7 +35,8 @@ const Contact = () => {
       );
       setStatus('success');
       setForm({ name: '', email: '', subject: '', message: '' });
-    } catch {
+    } catch (err) {
+      console.error('EmailJS error:', err);
       setStatus('error');
     }
   };
@@ -61,7 +61,7 @@ const Contact = () => {
               {[
                 { icon: <AiOutlineMail size={20} />, label: 'Email', value: 'gnikul39@gmail.com', green: false },
                 { icon: <MdLocationOn size={20} />, label: 'Location', value: 'Chemnitz, Germany', green: false },
-                { icon: <span className="text-base">⚡</span>, label: 'Status', value: 'Available for freelance & full-time', green: true },
+                { icon: <span className="text-base">⚡</span>, label: 'Status', value: 'Open to networking & collaboration', green: true },
               ].map(({ icon, label, value, green }) => (
                 <div key={label} className="flex items-center gap-4 relative rounded-[14px] p-5 overflow-hidden"
                   style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.07)' }}>
