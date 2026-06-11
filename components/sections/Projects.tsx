@@ -97,7 +97,7 @@ const gridLinePattern = {
 };
 
 const Projects = () => (
-  <section id="projects" className="px-6 lg:px-24 py-16 lg:py-24" style={{ background: 'var(--bg-secondary)' }}>
+  <section id="projects" className="dots px-6 lg:px-24 py-16 lg:py-24" style={{ backgroundColor: 'var(--bg-secondary)' }}>
     <div className="max-w-5xl mx-auto">
       <div className="flex items-end justify-between mb-8 lg:mb-12 flex-wrap gap-4">
         <div>
@@ -167,7 +167,7 @@ const Projects = () => (
         variants={containerVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
         {projects.map((p) => (
           <motion.div key={p.title} variants={cardVariants}
-            className="rounded-[18px] overflow-hidden transition-all duration-300 hover:-translate-y-1 border border-white/[0.07] hover:border-violet-400/25"
+            className="card-glow rounded-[18px] overflow-hidden hover:-translate-y-1 border border-white/[0.07]"
             style={{ background: 'rgba(255,255,255,0.03)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
             <div className={`bg-gradient-to-br ${p.gradient} h-28 flex items-center justify-center text-4xl relative overflow-hidden`}>
               <div className="absolute inset-0"

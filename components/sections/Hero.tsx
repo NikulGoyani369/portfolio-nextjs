@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
+import TypeWriter from '../ui/TypeWriter';
 
 const container = {
   hidden: {},
@@ -22,8 +23,8 @@ const socials = [
 
 const Hero = () => (
   <section
-    className="relative min-h-screen flex items-center px-6 lg:px-24 py-20 overflow-hidden"
-    style={{ background: 'var(--bg-primary)' }}
+    className="dots relative min-h-screen flex items-center px-6 lg:px-24 py-20 overflow-hidden"
+    style={{ backgroundColor: 'var(--bg-primary)' }}
   >
     {/* Ambient glow orbs */}
     <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full pointer-events-none"
@@ -53,7 +54,7 @@ const Hero = () => (
         </motion.div>
 
         <motion.div variants={item}
-          className="inline-flex items-center gap-2 text-xs text-violet-400 tracking-widest uppercase mb-6 px-4 py-2 rounded-full"
+          className="inline-flex items-center gap-2 text-[10px] sm:text-xs text-violet-400 tracking-widest uppercase mb-6 px-3 sm:px-4 py-2 rounded-full"
           style={{ background: 'rgba(139,92,246,0.12)', border: '1px solid rgba(139,92,246,0.25)' }}>
           <span>▸</span> V&amp;V Expert · Software Test Engineer
         </motion.div>
@@ -66,9 +67,8 @@ const Hero = () => (
           <span>kumar Goyani</span>
         </motion.h1>
 
-        <motion.p variants={item} className="text-base font-light mb-3 text-white/50">
-          Delivering{' '}
-          <span className="text-white/75 font-medium">reliable, high-quality software</span>
+        <motion.p variants={item} className="text-base font-light mb-2 text-white/50">
+          I&apos;m a <TypeWriter />
         </motion.p>
 
         <motion.p variants={item} className="text-sm leading-relaxed max-w-md mb-8 text-white/35 mx-auto lg:mx-0">
