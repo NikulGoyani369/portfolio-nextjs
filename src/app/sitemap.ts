@@ -5,8 +5,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: 'https://nikulgoyani.de',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
     },
   ];
 }
