@@ -148,12 +148,12 @@ const Projects = () => (
             ))}
           </div>
           <div className="flex gap-3">
-            <a href={featured.live} target="_blank" rel="noopener noreferrer"
+            <a href={featured.live} target="_blank" rel="noopener noreferrer" aria-label={`View ${featured.title} live demo`}
               className="text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded-lg text-white transition-all hover:brightness-110"
               style={{ background: 'linear-gradient(135deg, #7c3aed, #6d28d9)', border: '1px solid rgba(167,139,250,0.3)', boxShadow: '0 0 18px rgba(124,58,237,0.25)' }}>
               Live Demo ↗
             </a>
-            <a href={featured.github} target="_blank" rel="noopener noreferrer"
+            <a href={featured.github} target="_blank" rel="noopener noreferrer" aria-label={`View ${featured.title} source code on GitHub`}
               className="text-xs uppercase tracking-widest px-5 py-2.5 rounded-lg transition-colors text-white/45 hover:border-violet-400/40 hover:text-violet-400"
               style={{ border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)' }}>
               GitHub →
@@ -186,8 +186,8 @@ const Projects = () => (
                 ))}
               </div>
               <div className="flex gap-4">
-                <a href={p.live} target="_blank" rel="noopener noreferrer" className="text-[10px] text-violet-400 hover:underline">Live ↗</a>
-                <a href={p.github} target="_blank" rel="noopener noreferrer"
+                <a href={p.live} target="_blank" rel="noopener noreferrer" aria-label={`View ${p.title} live demo`} className="text-[10px] text-violet-400 hover:underline">Live ↗</a>
+                <a href={p.github} target="_blank" rel="noopener noreferrer" aria-label={`View ${p.title} source code on GitHub`}
                   className="text-[10px] transition-colors text-white/30 hover:text-violet-400">
                   GitHub →
                 </a>
