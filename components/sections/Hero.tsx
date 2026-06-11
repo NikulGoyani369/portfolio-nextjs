@@ -36,7 +36,7 @@ const Hero = () => (
       {/* Left */}
       <motion.div variants={container} initial="hidden" animate="show" className="text-center lg:text-left">
 
-        {/* Mobile photo — centered, shown only on small screens */}
+        {/* Mobile photo- centered, shown only on small screens */}
         <motion.div variants={item} className="flex justify-center mb-8 lg:hidden">
           <div className="relative">
             <div className="absolute inset-[-20px] rounded-full pointer-events-none"
@@ -102,7 +102,7 @@ const Hero = () => (
         </motion.div>
       </motion.div>
 
-      {/* Right: Photo card — desktop only */}
+      {/* Right: Photo card- desktop only */}
       <motion.div
         className="hidden lg:flex justify-center relative"
         initial={{ opacity: 0, x: 40 }}
