@@ -52,7 +52,7 @@ const Contact = () => {
           Let&apos;s <span className="text-violet-400">work together</span>
         </h2>
         <p className="text-sm leading-relaxed max-w-md mb-12 text-white/35">
-          Have a project in mind, or just want to say hi? Drop me a message — I typically reply within 24 hours.
+          Have a project in mind, or just want to say hi? Drop me a message - I typically reply within 24 hours.
         </p>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">

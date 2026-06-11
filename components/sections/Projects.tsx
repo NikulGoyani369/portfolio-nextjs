@@ -16,7 +16,7 @@ interface Project {
 const featured: Project = {
   title: 'Search Job Links',
   description:
-    'A live React + TypeScript web app that aggregates and surfaces job listings with a fast, searchable interface. Built with Vite for instant dev feedback and deployed on GitHub Pages — a practical tool born from real job-hunting needs.',
+    'A live React + TypeScript web app that aggregates and surfaces job listings with a fast, searchable interface. Built with Vite for instant dev feedback and deployed on GitHub Pages - a practical tool born from real job-hunting needs.',
   tech: ['React', 'TypeScript', 'Vite', 'CSS'],
   live: 'https://nikulgoyani369.github.io/Search-Job-Links/',
   github: 'https://github.com/NikulGoyani369/Search-Job-Links',
@@ -27,7 +27,7 @@ const featured: Project = {
 const projects: Project[] = [
   {
     title: 'Car Management API',
-    description: 'Full-stack REST API + CLI client for managing car manufacturers and models. Features offline-first sync — the CLI works locally when the server is down and auto-syncs on reconnection.',
+    description: 'Full-stack REST API + CLI client for managing car manufacturers and models. Features offline-first sync- the CLI works locally when the server is down and auto-syncs on reconnection.',
     tech: ['TypeScript', 'Node.js', 'MongoDB', 'REST API'],
     live: '#',
     github: 'https://github.com/NikulGoyani369/car-management',
@@ -36,7 +36,7 @@ const projects: Project[] = [
   },
   {
     title: 'Playwright Test Automation',
-    description: 'Hands-on test automation suite using Playwright and TypeScript, covering browser automation, assertions, and end-to-end testing patterns — directly applied in professional V&V work.',
+    description: 'Hands-on test automation suite using Playwright and TypeScript, covering browser automation, assertions, and end-to-end testing patterns- directly applied in professional V&V work.',
     tech: ['Playwright', 'TypeScript', 'E2E Testing', 'Node.js'],
     live: '#',
     github: 'https://github.com/NikulGoyani369/introduction-to-playwright',
