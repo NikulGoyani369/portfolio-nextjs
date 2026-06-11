@@ -34,7 +34,7 @@ const cardVariants = {
 };
 
 const Skills = () => (
-  <section id="skills" className="px-6 lg:px-24 py-16 lg:py-24" style={{ background: 'var(--bg-primary)' }}>
+  <section id="skills" className="dots px-6 lg:px-24 py-16 lg:py-24" style={{ backgroundColor: 'var(--bg-primary)' }}>
     <div className="max-w-5xl mx-auto">
       <SectionTag>Skills</SectionTag>
       <h2 className="text-white mb-3">
@@ -49,7 +49,7 @@ const Skills = () => (
         variants={containerVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
         {categories.map(({ icon, label, skills }) => (
           <motion.div key={label} variants={cardVariants}
-            className="relative rounded-[18px] p-6 overflow-hidden"
+            className="card-glow relative rounded-[18px] p-6 overflow-hidden"
             style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.07)' }}>
             <div className="absolute top-0 left-0 right-0 h-px"
               style={{ background: 'linear-gradient(to right, transparent, rgba(167,139,250,0.3), transparent)' }} />

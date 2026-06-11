@@ -21,11 +21,11 @@ const fadeRight = {
 };
 
 const About = () => (
-  <section id="about" className="px-6 lg:px-24 py-16 lg:py-24" style={{ background: 'var(--bg-secondary)' }}>
+  <section id="about" className="dots px-6 lg:px-24 py-16 lg:py-24" style={{ backgroundColor: 'var(--bg-secondary)' }}>
     <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-16 items-center max-w-5xl mx-auto">
       <motion.div className="flex justify-center lg:justify-start"
         variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true }}>
-        <div className="relative">
+        <div className="relative overflow-visible">
           <div className="w-[200px] h-[260px] overflow-hidden relative"
             style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '20px', boxShadow: '0 20px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08)' }}>
             <Image src="/assets/Nirmalbhai.jpg" alt="Nikul Goyani" width={200} height={260} className="object-cover w-full h-full" />

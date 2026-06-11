@@ -93,7 +93,7 @@ const Navbar = () => {
           </a>
 
           {/* Desktop links */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => {
               const isActive = link.id === activeSection;
               return (
@@ -118,7 +118,7 @@ const Navbar = () => {
             })}
           </ul>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <a
               href="https://www.linkedin.com/in/nikulkumar-goyani/"
               target="_blank"
@@ -131,7 +131,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
             <button
               className="text-white/40 hover:text-violet-400"
               onClick={() => setOpen(true)}

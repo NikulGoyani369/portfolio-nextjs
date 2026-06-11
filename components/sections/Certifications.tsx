@@ -35,7 +35,7 @@ const cardVariants = {
 };
 
 const Certifications = () => (
-  <section id="certifications" className="px-6 lg:px-24 py-16 lg:py-24" style={{ background: 'var(--bg-primary)' }}>
+  <section id="certifications" className="dots px-6 lg:px-24 py-16 lg:py-24" style={{ backgroundColor: 'var(--bg-primary)' }}>
     <div className="max-w-5xl mx-auto">
       <SectionTag>Certifications</SectionTag>
       <h2 className="text-white mb-3">
@@ -46,7 +46,7 @@ const Certifications = () => (
       </p>
 
       <motion.div
-        className="grid md:grid-cols-2 lg:grid-cols-3 gap-5"
+        className="grid gap-5 max-w-sm"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
@@ -56,7 +56,7 @@ const Certifications = () => (
           <motion.div
             key={cert.title}
             variants={cardVariants}
-            className="relative rounded-[18px] p-6 overflow-hidden flex flex-col gap-4"
+            className="card-glow relative rounded-[18px] p-6 overflow-hidden flex flex-col gap-4"
             style={
               cert.highlight
                 ? { background: 'rgba(139,92,246,0.06)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(139,92,246,0.25)' }

@@ -45,7 +45,7 @@ const Contact = () => {
   const inputStyle = { background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.6)' };
 
   return (
-    <section id="contact" className="px-6 lg:px-24 py-16 lg:py-24" style={{ background: 'var(--bg-primary)' }}>
+    <section id="contact" className="dots px-6 lg:px-24 py-16 lg:py-24" style={{ backgroundColor: 'var(--bg-primary)' }}>
       <div className="max-w-5xl mx-auto">
         <SectionTag>Contact</SectionTag>
         <h2 className="text-white mb-3">
@@ -63,7 +63,7 @@ const Contact = () => {
                 { icon: <MdLocationOn size={20} />, label: 'Location', value: 'Chemnitz, Germany', green: false },
                 { icon: <span className="text-base">⚡</span>, label: 'Status', value: 'Open to networking & collaboration', green: true },
               ].map(({ icon, label, value, green }) => (
-                <div key={label} className="flex items-center gap-4 relative rounded-[14px] p-5 overflow-hidden"
+                <div key={label} className="flex items-center gap-3 relative rounded-[14px] p-4 sm:p-5 overflow-hidden"
                   style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.07)' }}>
                   <div className="absolute top-0 left-0 right-0 h-px"
                     style={{ background: 'linear-gradient(to right, transparent, rgba(167,139,250,0.2), transparent)' }} />
@@ -78,7 +78,7 @@ const Contact = () => {
                 </div>
               ))}
             </div>
-            <div className="flex gap-3">
+            <div className="flex gap-2 flex-wrap">
               {socials.map(({ label, icon: Icon, href }) => (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl text-xs transition-colors text-white/35 hover:text-violet-400"
