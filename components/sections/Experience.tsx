@@ -82,7 +82,7 @@ const cardVariants = {
 };
 
 const Experience = () => (
-  <section id="experience" className="px-6 lg:px-24 py-16 lg:py-24" style={{ background: 'var(--bg-secondary)' }}>
+  <section id="experience" className="dots px-6 lg:px-24 py-16 lg:py-24" style={{ backgroundColor: 'var(--bg-secondary)' }}>
     <div className="max-w-5xl mx-auto">
       <SectionTag>Experience</SectionTag>
       <h2 className="text-white mb-3">
@@ -109,7 +109,7 @@ const Experience = () => (
               </div>
 
               {/* Card */}
-              <div className="flex-1 relative rounded-2xl px-4 sm:px-6 py-4 sm:py-5 overflow-hidden"
+              <div className="card-glow flex-1 relative rounded-2xl px-4 sm:px-6 py-4 sm:py-5 overflow-hidden"
                 style={entry.current
                   ? { background: 'rgba(139,92,246,0.05)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(139,92,246,0.2)' }
                   : { background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.08)' }}>
