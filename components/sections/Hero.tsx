@@ -43,7 +43,7 @@ const Hero = () => (
               style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.25) 0%, transparent 70%)', filter: 'blur(30px)' }} />
             <div className="relative w-[140px] h-[140px] overflow-hidden"
               style={{ background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '50%', boxShadow: '0 16px 40px rgba(0,0,0,0.4)' }}>
-              <Image src="/assets/Nirmalbhai.jpg" alt="Nikul Goyani" width={140} height={140} priority className="object-cover w-full h-full" />
+              <Image src="/assets/nikulkumar-goyani.jpg" alt="Nikulkumar Goyani – Senior Software Test Engineer and V&V Expert, Chemnitz, Germany" width={140} height={140} priority className="object-cover w-full h-full" />
             </div>
             <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 whitespace-nowrap"
               style={{ background: 'rgba(10,10,26,0.9)', backdropFilter: 'blur(12px)', border: '1px solid rgba(139,92,246,0.3)', borderRadius: '100px', padding: '4px 10px' }}>
@@ -86,7 +86,7 @@ const Hero = () => (
           <a href="https://www.linkedin.com/in/nikulkumar-goyani/" target="_blank" rel="noopener noreferrer"
             className="text-xs uppercase tracking-widest text-violet-400 px-7 py-3.5 rounded-xl transition-colors hover:bg-violet-400/10"
             style={{ background: 'rgba(167,139,250,0.06)', border: '1px solid rgba(167,139,250,0.2)' }}>
-            Download CV
+            View LinkedIn Profile
           </a>
         </motion.div>
 
@@ -122,7 +122,7 @@ const Hero = () => (
         {/* Photo card */}
         <div className="relative w-[220px] h-[290px] overflow-hidden"
           style={{ background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '24px', boxShadow: '0 24px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)' }}>
-          <Image src="/assets/Nirmalbhai.jpg" alt="Nikul Goyani" width={220} height={290} priority className="object-cover w-full h-full" />
+          <Image src="/assets/nikulkumar-goyani.jpg" alt="Nikulkumar Goyani – Senior Software Test Engineer and V&V Expert, Chemnitz, Germany" width={220} height={290} priority className="object-cover w-full h-full" />
           <div className="absolute inset-0 pointer-events-none"
             style={{ background: 'linear-gradient(to bottom, transparent 50%, rgba(109,40,217,0.3) 100%)' }} />
         </div>
