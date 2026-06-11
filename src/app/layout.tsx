@@ -16,7 +16,7 @@ export const metadata = {
     title: 'Nikulkumar Goyani | Software Test Engineer & V&V Expert',
     description:
       'Senior Software Test Engineer with 6+ years of experience in quality engineering, test automation & V&V in regulated environments. ISTQB CTFL certified.',
-    url: 'https://nikulkumar-goyani.vercel.app',
+    url: 'https://nikulgoyani.de',
     siteName: 'Nikulkumar Goyani Portfolio',
     locale: 'en_US',
     type: 'website',
