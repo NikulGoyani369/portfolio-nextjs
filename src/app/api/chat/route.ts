@@ -1,6 +1,7 @@
 import Groq from 'groq-sdk';
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
 
 const SYSTEM_PROMPT = `You are the AI assistant embedded in Nikulkumar Goyani's (Nikul's) portfolio website. You help visitors learn about Nikul quickly and accurately. Be concise — 2-4 sentences unless they ask for detail. Be warm and professional.
 
@@ -38,6 +39,7 @@ Contact:
 If asked something you don't know specifically about Nikul, say so honestly and suggest the visitor reach out via email or LinkedIn. Never fabricate details.`;
 
 export async function POST(req: Request) {
+  const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
   const { messages } = await req.json();
 
   const encoder = new TextEncoder();
