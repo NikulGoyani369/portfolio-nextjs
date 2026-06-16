@@ -2,6 +2,7 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '../../components/ui/ThemeProvider';
 import { Analytics } from '@vercel/analytics/react';
+import AiChat from '../../components/ui/AiChat';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -103,6 +104,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <ThemeProvider>{children}</ThemeProvider>
+        <AiChat />
         <Analytics />
       </body>
     </html>
