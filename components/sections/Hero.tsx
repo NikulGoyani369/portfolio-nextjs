@@ -48,7 +48,7 @@ const Hero = () => (
             <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 whitespace-nowrap"
               style={{ background: 'rgba(10,10,26,0.9)', backdropFilter: 'blur(12px)', border: '1px solid rgba(139,92,246,0.3)', borderRadius: '100px', padding: '4px 10px' }}>
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" style={{ boxShadow: '0 0 6px #4ade80' }} />
-              <span className="text-violet-400 text-[9px] tracking-widest uppercase">Open to Connect</span>
+              <span className="text-violet-400 text-[9px] tracking-widest uppercase">Open to Opportunities</span>
             </div>
           </div>
         </motion.div>
@@ -83,10 +83,15 @@ const Hero = () => (
             style={{ background: 'linear-gradient(135deg, #7c3aed, #6d28d9)', border: '1px solid rgba(167,139,250,0.3)', boxShadow: '0 0 24px rgba(124,58,237,0.3)' }}>
             View Projects →
           </a>
-          <a href="https://www.linkedin.com/in/nikulkumar-goyani/" target="_blank" rel="noopener noreferrer"
-            className="text-xs uppercase tracking-widest text-violet-400 px-7 py-3.5 rounded-xl transition-colors hover:bg-violet-400/10"
+          <a href="/Nikul-Goyani-CV.pdf" download="Nikul-Goyani-CV.pdf"
+            className="text-xs uppercase tracking-widest text-violet-400 px-7 py-3.5 rounded-xl transition-colors hover:bg-violet-400/10 flex items-center gap-2"
             style={{ background: 'rgba(167,139,250,0.06)', border: '1px solid rgba(167,139,250,0.2)' }}>
-            View LinkedIn Profile
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download CV
           </a>
         </motion.div>
 
@@ -131,7 +136,7 @@ const Hero = () => (
         <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 whitespace-nowrap"
           style={{ background: 'rgba(10,10,26,0.9)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(139,92,246,0.3)', borderRadius: '100px', padding: '6px 14px', boxShadow: '0 4px 20px rgba(0,0,0,0.4)' }}>
           <span className="w-2 h-2 rounded-full bg-green-400 flex-shrink-0" style={{ boxShadow: '0 0 8px #4ade80' }} />
-          <span className="text-violet-400 text-[10px] tracking-widest uppercase">Open to Connect</span>
+          <span className="text-violet-400 text-[10px] tracking-widest uppercase">Open to Opportunities</span>
         </div>
       </motion.div>
     </div>
