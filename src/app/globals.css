@@ -60,3 +60,30 @@
     border-color: rgba(139, 92, 246, 0.4) !important;
   }
 }
+
+/* Blog article prose styles */
+.prose-blog p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.prose-blog h2 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.25px;
+}
+
+.prose-blog strong {
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+}
+
+.prose-blog em {
+  color: rgba(167,139,250,0.85);
+  font-style: italic;
+}
