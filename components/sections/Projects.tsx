@@ -1,85 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import SectionTag from '../ui/SectionTag';
-
-interface Project {
-  title: string;
-  description: string;
-  tech: string[];
-  live: string;
-  github: string;
-  gradient: string;
-  emoji: string;
-}
-
-const featured: Project = {
-  title: 'Search Job Links',
-  description:
-    'A live React + TypeScript web app that aggregates and surfaces job listings with a fast, searchable interface. Built with Vite for instant dev feedback and deployed on GitHub Pages - a practical tool born from real job-hunting needs.',
-  tech: ['React', 'TypeScript', 'Vite', 'CSS'],
-  live: 'https://nikulgoyani369.github.io/Search-Job-Links/',
-  github: 'https://github.com/NikulGoyani369/Search-Job-Links',
-  gradient: 'from-[#1a1a2e] to-[#16213e]',
-  emoji: '🔍',
-};
-
-const projects: Project[] = [
-  {
-    title: 'Car Management API',
-    description: 'Full-stack REST API + CLI client for managing car manufacturers and models. Features offline-first sync- the CLI works locally when the server is down and auto-syncs on reconnection.',
-    tech: ['TypeScript', 'Node.js', 'MongoDB', 'REST API'],
-    live: '#',
-    github: 'https://github.com/NikulGoyani369/car-management',
-    gradient: 'from-[#1a1a2e] to-[#2d1b4e]',
-    emoji: '🚗',
-  },
-  {
-    title: 'Playwright Test Automation',
-    description: 'Hands-on test automation suite using Playwright and TypeScript, covering browser automation, assertions, and end-to-end testing patterns- directly applied in professional V&V work.',
-    tech: ['Playwright', 'TypeScript', 'E2E Testing', 'Node.js'],
-    live: '#',
-    github: 'https://github.com/NikulGoyani369/introduction-to-playwright',
-    gradient: 'from-[#0f1f2e] to-[#1a3a4e]',
-    emoji: '🎭',
-  },
-  {
-    title: 'Master Thesis (Python)',
-    description: 'Academic research project from the MSc in Computer Engineering at University of Duisburg-Essen. A Python-based system with 288 commits, combining data processing, analysis, and a web-based output layer.',
-    tech: ['Python', 'HTML', 'Shell', 'Data Analysis'],
-    live: '#',
-    github: 'https://github.com/NikulGoyani369/Master_Thesis',
-    gradient: 'from-[#1a2e1a] to-[#1a4e2d]',
-    emoji: '🎓',
-  },
-  {
-    title: 'Portfolio Website',
-    description: 'Personal developer portfolio built with Next.js 13 App Router, TypeScript, and Framer Motion. Features dark-mode design, animated sections, EmailJS contact form, and OG image generation.',
-    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-    live: '#',
-    github: 'https://github.com/NikulGoyani369/portfolio-nextjs',
-    gradient: 'from-[#1a1a2e] to-[#2a1040]',
-    emoji: '🌐',
-  },
-  {
-    title: 'Selenium Test Suite',
-    description: 'Reusable test automation framework using Selenium WebDriver and Python. Covers login flows, form validation, and regression scenarios with structured reporting and CI-ready configuration.',
-    tech: ['Python', 'Selenium', 'pytest', 'CI/CD'],
-    live: '#',
-    github: 'https://github.com/NikulGoyani369',
-    gradient: 'from-[#0f1a2e] to-[#1a2e3a]',
-    emoji: '🤖',
-  },
-  {
-    title: 'REST API Testing Framework',
-    description: 'API testing suite covering CRUD operations, authentication flows, and error handling for a Node.js backend. Validates response schemas, status codes, and edge cases with automated assertions.',
-    tech: ['TypeScript', 'Node.js', 'REST API', 'Jest'],
-    live: '#',
-    github: 'https://github.com/NikulGoyani369',
-    gradient: 'from-[#1e1a0f] to-[#2e2a1a]',
-    emoji: '⚙️',
-  },
-];
+import { featuredProject, projects } from '../../src/data/projects';
 
 const cardVariants = {
   hidden: { y: 30, opacity: 0 },
@@ -125,9 +49,9 @@ const Projects = () => (
         <div className="absolute top-0 left-0 right-0 h-px z-10"
           style={{ background: 'linear-gradient(to right, rgba(139,92,246,0.6), rgba(167,139,250,0.2), transparent)' }} />
 
-        <div className={`bg-gradient-to-br ${featured.gradient} min-h-[200px] flex items-center justify-center text-6xl relative overflow-hidden`}>
+        <div className={`bg-gradient-to-br ${featuredProject.gradient} min-h-[200px] flex items-center justify-center text-6xl relative overflow-hidden`}>
           <div className="absolute inset-0" style={gridLinePattern} />
-          <span className="relative z-10">{featured.emoji}</span>
+          <span className="relative z-10">{featuredProject.emoji}</span>
         </div>
 
         <div className="p-8 flex flex-col justify-center">
@@ -135,29 +59,32 @@ const Projects = () => (
             style={{ background: 'rgba(139,92,246,0.12)', border: '1px solid rgba(139,92,246,0.2)' }}>
             ⭐ Featured Project
           </span>
-          <h3 className="text-lg font-bold text-white mb-3">{featured.title}</h3>
-          <p className="text-xs leading-relaxed mb-4 text-white/40">
-            {featured.description}
-          </p>
+          <h3 className="text-lg font-bold text-white mb-3">{featuredProject.title}</h3>
+          <p className="text-xs leading-relaxed mb-4 text-white/40">{featuredProject.description}</p>
           <div className="flex flex-wrap gap-2 mb-6">
-            {featured.tech.map((t) => (
+            {featuredProject.tech.map((t) => (
               <span key={t} className="text-[10px] px-2.5 py-1 rounded-md text-white/35"
                 style={{ border: '1px solid rgba(255,255,255,0.08)' }}>
                 {t}
               </span>
             ))}
           </div>
-          <div className="flex gap-3">
-            <a href={featured.live} target="_blank" rel="noopener noreferrer" aria-label={`View ${featured.title} live demo`}
+          <div className="flex gap-3 flex-wrap">
+            <a href={featuredProject.live} target="_blank" rel="noopener noreferrer"
               className="text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded-lg text-white transition-all hover:brightness-110"
               style={{ background: 'linear-gradient(135deg, #7c3aed, #6d28d9)', border: '1px solid rgba(167,139,250,0.3)', boxShadow: '0 0 18px rgba(124,58,237,0.25)' }}>
               Live Demo ↗
             </a>
-            <a href={featured.github} target="_blank" rel="noopener noreferrer" aria-label={`View ${featured.title} source code on GitHub`}
-              className="text-xs uppercase tracking-widest px-5 py-2.5 rounded-lg transition-colors text-white/45 hover:border-violet-400/40 hover:text-violet-400"
+            <a href={featuredProject.github} target="_blank" rel="noopener noreferrer"
+              className="text-xs uppercase tracking-widest px-5 py-2.5 rounded-lg transition-colors text-white/45 hover:text-violet-400"
               style={{ border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)' }}>
               GitHub →
             </a>
+            <Link href={`/projects/${featuredProject.slug}`}
+              className="text-xs uppercase tracking-widest px-5 py-2.5 rounded-lg transition-colors text-violet-400 hover:bg-violet-400/10"
+              style={{ border: '1px solid rgba(167,139,250,0.25)', background: 'rgba(167,139,250,0.06)' }}>
+              Case Study →
+            </Link>
           </div>
         </div>
       </motion.div>
@@ -185,12 +112,19 @@ const Projects = () => (
                   </span>
                 ))}
               </div>
-              <div className="flex gap-4">
-                <a href={p.live} target="_blank" rel="noopener noreferrer" aria-label={`View ${p.title} live demo`} className="text-[10px] text-violet-400 hover:underline">Live ↗</a>
-                <a href={p.github} target="_blank" rel="noopener noreferrer" aria-label={`View ${p.title} source code on GitHub`}
+              <div className="flex gap-4 items-center">
+                {p.live !== '#' && (
+                  <a href={p.live} target="_blank" rel="noopener noreferrer"
+                    className="text-[10px] text-violet-400 hover:underline">Live ↗</a>
+                )}
+                <a href={p.github} target="_blank" rel="noopener noreferrer"
                   className="text-[10px] transition-colors text-white/30 hover:text-violet-400">
                   GitHub →
                 </a>
+                <Link href={`/projects/${p.slug}`}
+                  className="text-[10px] text-violet-400/70 hover:text-violet-400 transition-colors ml-auto">
+                  Case Study →
+                </Link>
               </div>
             </div>
           </motion.div>
