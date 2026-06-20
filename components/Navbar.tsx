@@ -11,6 +11,7 @@ const navLinks = [
   { label: 'Skills',         href: '#skills',          id: 'skills'         },
   { label: 'Certifications', href: '#certifications',  id: 'certifications' },
   { label: 'Projects',       href: '#projects',        id: 'projects'       },
+  { label: 'Blog',           href: '#blog',            id: 'blog'           },
   { label: 'Contact',        href: '#contact',         id: 'contact'        },
 ];
 
@@ -120,13 +121,17 @@ const Navbar = () => {
 
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="https://www.linkedin.com/in/nikulkumar-goyani/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs uppercase tracking-widest text-violet-400 px-4 py-2 rounded-lg transition-colors hover:bg-violet-400/10"
+              href="/Nikul-Goyani-CV.pdf"
+              download="Nikul-Goyani-CV.pdf"
+              className="text-xs uppercase tracking-widest text-violet-400 px-4 py-2 rounded-lg transition-colors hover:bg-violet-400/10 flex items-center gap-1.5"
               style={{ border: '1px solid rgba(167,139,250,0.35)' }}
             >
-              Resume ↗
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Resume
             </a>
           </div>
 
@@ -187,13 +192,17 @@ const Navbar = () => {
                   })}
                 </ul>
                 <a
-                  href="https://www.linkedin.com/in/nikulkumar-goyani/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/Nikul-Goyani-CV.pdf"
+                  download="Nikul-Goyani-CV.pdf"
                   onClick={() => setOpen(false)}
-                  className="mt-auto text-xs uppercase tracking-widest text-violet-400 border border-violet-400/40 px-4 py-3 rounded-md text-center hover:bg-violet-400/10 transition-colors"
+                  className="mt-auto text-xs uppercase tracking-widest text-violet-400 border border-violet-400/40 px-4 py-3 rounded-md text-center hover:bg-violet-400/10 transition-colors flex items-center justify-center gap-2"
                 >
-                  Resume ↗
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Download Resume
                 </a>
               </motion.div>
             </>
