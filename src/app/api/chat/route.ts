@@ -48,7 +48,7 @@ export async function POST(req: Request) {
     async start(controller) {
       try {
         const stream = await groq.chat.completions.create({
-          model: 'llama-3.3-70b-versatile',
+          model: 'openai/gpt-oss-20b',
           max_tokens: 600,
           messages: [
             { role: 'system', content: SYSTEM_PROMPT },
@@ -62,9 +62,9 @@ export async function POST(req: Request) {
           if (text) controller.enqueue(encoder.encode(text));
         }
       } catch (err: unknown) {
-        console.error('[/api/chat]', err);
+        console.error('[/api/chat] Error:', err);
         controller.enqueue(
-          encoder.encode('Sorry, something went wrong. Please try again.')
+          encoder.encode(`Sorry, something went wrong. Please try again.`)
         );
       } finally {
         controller.close();
