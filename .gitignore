@@ -38,3 +38,10 @@ next-env.d.ts
 /superpowers
 .superpowers/
 /docs
+.claude
+.claude/skills
+.claude/tools
+.claude/agents
+.claude/artifacts
+.claude/memories
+.claude/gears
